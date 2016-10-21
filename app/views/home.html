@@ -24,9 +24,7 @@
                </div>
                <div class="col-xs-8 wthree_services_grid-right">
                   <h4>Easy Setup</h4>
-                  <p class="my-p-class">Itaque earum rerum hic tenetur a sapiente delectus, ut aut 
-                     reiciendis voluptatibus maiores alias consequatur aut perferendis 
-                     doloribus asperiores repellat.</p>
+                  <p class="my-p-class">Easy Setup, simple and fixible log in / sign up free setup in open wifi for public places</p>
                </div>
                <div class="clearfix"> </div>
             </div>
@@ -38,9 +36,8 @@
                </div>
                <div class="col-xs-8 wthree_services_grid-right">
                   <h4>Fast</h4>
-                  <p class="my-p-class">Itaque earum rerum hic tenetur a sapiente delectus, ut aut 
-                     reiciendis voluptatibus maiores alias consequatur aut perferendis 
-                     doloribus asperiores repellat.</p>
+                  <p class="my-p-class">2 mbps pure speed for per person, Buffer free youtube / torrent, enjoy streaming TV Shows, Online gaming, Unlimited             
+    Downloading of Pictures, Music, Video</p>
                </div>
                <div class="clearfix"> </div>
             </div>
@@ -55,9 +52,7 @@
                </div>
                <div class="col-xs-8 wthree_services_grid-right">
                   <h4>Secure</h4>
-                  <p class="my-p-class">Itaque earum rerum hic tenetur a sapiente delectus, ut aut 
-                     reiciendis voluptatibus maiores alias consequatur aut perferendis 
-                     doloribus asperiores repellat.</p>
+                  <p class="my-p-class">High Secure Machines & Technologies, Log in / sign up for private internet access will secure your connection for you</p>
                </div>
                <div class="clearfix"> </div>
             </div>
@@ -69,9 +64,7 @@
                </div>
                <div class="col-xs-8 wthree_services_grid-right">
                   <h4>Support</h4>
-                  <p class="my-p-class">Itaque earum rerum hic tenetur a sapiente delectus, ut aut 
-                     reiciendis voluptatibus maiores alias consequatur aut perferendis 
-                     doloribus asperiores repellat.</p>
+                  <p class="my-p-class">24/7 customer care support</p>
                </div>
                <div class="clearfix"> </div>
             </div>
@@ -101,7 +94,7 @@
                  <div layout="column" ng-cloak class="md-inline-form">
                     <md-content layout-padding>
                       <div>
-                        <form name="userForm">  
+                        <form name="userForm" action="../../php/mail/mail.php">  
                           <md-input-container class="md-block">
                             <label>Name</label>
                             <input ng-model="user.address">
@@ -118,13 +111,13 @@
                             <label>Message</label>
                             <textarea ng-model="user.biography" rows="5" md-select-on-focus></textarea>
                           </md-input-container>
-                        </form>
+                        
                       </div>
                       <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
                         
-                        <md-button md-no-ink class="md-primary kostation-button shadow">SEND</md-button>
+                        <md-button md-no-ink class="md-primary kostation-button shadow" type="submit">SEND</md-button>
                         
-                        
+                        </form>
                       </section>
                     </md-content>
                   </div>

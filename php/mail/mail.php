@@ -39,16 +39,16 @@ $mail->Password = "Password@123";
 //Set who the message is to be sent from
 $mail->setFrom('contact@kostation.com', 'KOStation Admin');
 //Set an alternative reply-to address
-$mail->addReplyTo('contact@kostation.com', 'KOStation Admin');
+$mail->addReplyTo($_GET["email"],  $_GET["name"]);
 //Set who the message is to be sent to
-$mail->addAddress($_GET["email"], $_GET["name"]);
+$mail->addAddress("info@kostation.com",'KOStation Admin');
 //Set the subject line
 $mail->Subject = 'PHPMailer SMTP test';
 //Read an HTML message body from an external file, convert referenced images to embedded,
 //convert HTML into a basic plain-text alternative body
-$mail->msgHTML($_GET["msg"]." -- ".$_GET["contact"]);//file_get_contents('contents.html'), dirname(__FILE__));
+$mail->msgHTML("<b>Name:</b>".$_GET["name"]."<br><b>Contact:</b>".$_GET["contact"]."<br><b>Message:</b>".$_GET["msg"]);//file_get_contents('contents.html'), dirname(__FILE__));
 //Replace the plain text body with one created manually
-$mail->AltBody = 'This is a plain-text message body';
+//$mail->AltBody = 'This is a plain-text message body';
 //Attach an image file
 //$mail->addAttachment('images/phpmailer_mini.gif');
  
