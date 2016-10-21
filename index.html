@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html ng-app="koStation">
+<head>
+<title>KO Station</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Wayfaring Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="app/styles/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="app/styles/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="app/scripts/vendor/jquery-2.1.4.min.js"></script>
+<link rel="shortcut icon" type="image/png" href="app/img/favicon.png"/>
+<!-- //js -->
+<link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;lang=en" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons+Extended" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+<!-- start-smoth-scrolling
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+</head>
+	
+<body  ng-controller="MainController" ng-class="{'no-scroll': apply}">
+<!-- banner -->
+	<div class="banner">
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+					<div class="logo">
+						<h1>
+							<a class="navbar-brand" href="index.html">
+							<img src="app/img/logo.svg" style="width: 220px;height: 28px;"/>
+						</h1>
+					</div>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+					<nav class="link-effect-2" id="link-effect-2"> 
+						<ul class="nav navbar-nav">
+							<li class="isactive hide"><a href="" ng-click="toggleLeft();apply = true"><span data-hover="Menu">Menu</span></a></li>
+						</ul>
+					</nav>
+				</div>
+				<!--<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+					<nav class="link-effect-2" id="link-effect-2"> 
+						<ul class="nav navbar-nav">
+							<li class="isactive"><a href="index.html"><span data-hover="Home">Home</span></a></li>
+							<li><a href="plans.html"><span data-hover="Our Plans">Our Plans</span></a></li>
+							<li><a href="services.html"><span data-hover="Services">Services</span></a></li>
+							<li><a href="contact.html"><span data-hover="Contact US">Contact US</span></a></li>
+						</ul>
+					</nav>
+				</div>-->
+				<!-- /.navbar-collapse -->
+			</nav>
+			<div class="banner-info" style="text-align:left">
+				<h2 style="font-weight: 500;text-transform: none;">Fast Wi-Fi for Everyone</h2>
+				<p style="font-size: 18px;">Introducing <b>KO Station</b>. Better connections, in more Public Places.</p>
+				<!--<div class="social_icons" style="margin-top: 55%">
+					<ul>
+						<li><a href="https://www.facebook.com/KOstationwifi/" target="_blank" class="icon icon-cube facebook"></a></li>
+						<li><a href="https://twitter.com/Kostationwifi" target="_blank" class="icon icon-cube rss"></a></li>
+						<li><a href="https://www.instagram.com/kostation/?hl=en" target="_blank" class="icon icon-cube instagram"></a></li>
+					</ul>
+				</div>-->
+			</div>
+		</div>
+	</div>
+<!-- //banner -->
+
+	<div layout="column"  ng-cloak>
+  <section layout="row" flex>
+    <md-sidenav class="md-sidenav-left" md-component-id="left"
+                md-whiteframe="4">
+      <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools">KO Station</h1>
+      </md-toolbar>
+      <md-content layout-margin>
+        <p>
+          This sidenav is not showing any backdrop, where users can click on it, to close the sidenav.
+        </p>
+        <md-button ng-click="toggleLeft();apply = false" class="md-accent">
+          Close this Sidenav
+        </md-button>
+      </md-content>
+    </md-sidenav>
+  </section>
+</div>
+
+	<ng-view></ng-view>
+
+
+<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-grids">
+				<div class="col-md-5 footer-grid">
+					<h3 style="font-weight: 300;font-size: 23px;">About Us</h3>
+					<p style="color: #fff;font-size: 15px;">We are here to Digitize your city with high speed wifi and start a new era of modernization. A single point access provider, bringing into the public placses. It is currently PCMC’s largest internet services provider.</p>
+				</div>
+				<div class="col-md-5 footer-grid">
+					<h3 style="font-weight: 300;font-size: 23px;">Contact Info</h3>
+					<ul>
+						<li style="color: #fff"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>109, Zen Business Center, <span>Mumbai - Banglore Highway,</span><span>Bhumkar Chwok, Wakad, Pune - 411 057.</span></li>
+						<li style="color: #fff"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>info@kostation.com</li>
+						<li style="color: #fff"><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+91 8928920000</li>
+					</ul>
+				</div>
+				<div class="col-md-2 footer-grid footer-grid1">
+					<h3 style="font-weight: 300;font-size: 23px;">Navigation</h3>
+					<ul>
+						<li style="color: #fff"><a href="#/" class="scroll">Home</a></li>
+						<!--<li style="color: #fff"><a href="#portfolio" class="scroll">Portfolio</a></li>
+						<li style="color: #fff"><a href="#services" class="scroll">Services</a></li>
+						<li style="color: #fff"><a href="#mail" class="scroll">Mail Us</a></li>-->
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<div class="copy-right">
+		<div class="container">
+			<div class="social_icons">
+				<ul>
+					<li><a href="https://www.facebook.com/KOstationwifi/" target="_blank" class="icon icon-cube facebook"></a></li>
+					<li><a href="https://twitter.com/Kostationwifi" target="_blank" class="icon icon-cube rss"></a></li>
+					<li><a href="https://www.instagram.com/kostation/?hl=en" target="_blank" class="icon icon-cube instagram"></a></li>
+				</ul>
+			</div>	
+		</div>
+	</div>
+<!-- //footer -->
+<!-- for bootstrap working -->
+	<script src="app/scripts/vendor/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+
+<!-- Bootstrap core JavaScript. Placed at the end of the document so the pages load faster -->        
+        
+        <!-- AngularJS Vendor files -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+
+        <script src="app/scripts/vendor/ui-bootstrap-tpls-0.11.0.js"></script>
+		<script src="app/scripts/vendor/angular-material.js"></script>
+		
+
+        <!-- Routing file-->
+        <script src="app/scripts/app.js"></script>
+
+        <!-- Controllers -->
+        <script src="app/scripts/controllers/MainController.js"></script>
+        
+</body>
+</html>
