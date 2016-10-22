@@ -43,7 +43,7 @@ $mail->addReplyTo($_GET["email"],  $_GET["name"]);
 //Set who the message is to be sent to
 $mail->addAddress("info@kostation.com",'KOStation Admin');
 //Set the subject line
-$mail->Subject = 'PHPMailer SMTP test';
+$mail->Subject = 'Welcome to KOStation';
 //Read an HTML message body from an external file, convert referenced images to embedded,
 //convert HTML into a basic plain-text alternative body
 $mail->msgHTML("<b>Name:</b>".$_GET["name"]."<br><b>Contact:</b>".$_GET["contact"]."<br><b>Message:</b>".$_GET["msg"]);//file_get_contents('contents.html'), dirname(__FILE__));
