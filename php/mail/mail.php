@@ -14,7 +14,6 @@ date_default_timezone_set('Etc/UTC');
 require './PHPMailerAutoload.php';
    if( $_GET["name"] && $_GET["contact"] &&  $_GET["email"] && $_GET["msg"] ) 
    {
-    
 //Create a new PHPMailer instance
 $mail = new PHPMailer();
 //Tell PHPMailer to use SMTP
@@ -29,21 +28,21 @@ $mail->Debugoutput = 'html';
 //Set the hostname of the mail server
 $mail->Host = "mail.kostation.com";
 //Set the SMTP port number - likely to be 25, 465 or 587
-$mail->Port = 25;
+$mail->Port = 8889;
 //Whether to use SMTP authentication
 $mail->SMTPAuth = true;
 //Username to use for SMTP authentication
-$mail->Username = "contact@kostation.com";
+$mail->Username = "support@kostation.com";
 //Password to use for SMTP authentication
 $mail->Password = "Password@123";
 //Set who the message is to be sent from
-$mail->setFrom('contact@kostation.com', 'KOStation Admin');
+$mail->setFrom('support@kostation.com', 'KO Station Support');
 //Set an alternative reply-to address
 $mail->addReplyTo($_GET["email"],  $_GET["name"]);
 //Set who the message is to be sent to
-$mail->addAddress("info@kostation.com",'KOStation Admin');
+$mail->addAddress("info@kostation.com",'KO Station Admin');
 //Set the subject line
-$mail->Subject = 'Welcome to KOStation';
+$mail->Subject = 'Enquiry from '.$_GET["name"];
 //Read an HTML message body from an external file, convert referenced images to embedded,
 //convert HTML into a basic plain-text alternative body
 $mail->msgHTML("<b>Name:</b>".$_GET["name"]."<br><b>Contact:</b>".$_GET["contact"]."<br><b>Message:</b>".$_GET["msg"]);//file_get_contents('contents.html'), dirname(__FILE__));
@@ -51,7 +50,6 @@ $mail->msgHTML("<b>Name:</b>".$_GET["name"]."<br><b>Contact:</b>".$_GET["contact
 //$mail->AltBody = 'This is a plain-text message body';
 //Attach an image file
 //$mail->addAttachment('images/phpmailer_mini.gif');
- 
 //send the message, check for errors
 if (!$mail->send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
@@ -61,7 +59,7 @@ if (!$mail->send()) {
    }
    else
    {
-	   echo "no get msg";
+     echo "no get msg";
    }
 ?>
 </body>

@@ -20,7 +20,7 @@
 
             $scope.sendMail = function() {
                 console.log("$$"+JSON.stringify($scope.user));
-                var api = 'http://localhost/KOStation/php/mail/mail.php?' + 'name=' + $scope.user.name + '&contact=' + $scope.user.contactno + '&email=' + $scope.user.email + '&msg=' + $scope.user.message;
+                var api = './php/mail/mail.php?' + 'name=' + $scope.user.name + '&contact=' + $scope.user.contactno + '&email=' + $scope.user.email + '&msg=' + $scope.user.message;
                 $http({
                   method: 'GET',
                   url: api
