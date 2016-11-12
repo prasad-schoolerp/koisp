@@ -11,7 +11,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
 <link href="app/styles/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="app/styles/style.css" rel="stylesheet" type="text/css" media="all" />
+
 <!-- js -->
 <script type="text/javascript" src="app/scripts/vendor/jquery-2.1.4.min.js"></script>
 <link rel="shortcut icon" type="image/png" href="app/img/favicon.png"/>
@@ -20,6 +20,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="//fonts.googleapis.com/icon?family=Material+Icons+Extended" rel="stylesheet" type="text/css">
 
 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+<link href="app/styles/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- start-smoth-scrolling
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
@@ -34,50 +35,56 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- start-smoth-scrolling -->
 </head>
 	
-<body  ng-controller="MainController" ng-class="{'no-scroll': apply}">
+<body ng-controller="MainController" scroll>
 <!-- banner -->
 	<div class="banner">
-		<div class="container">
-			<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default fixed-navbar">
 				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				  </button>
-					<div class="logo">
-						<h1>
-							<a class="navbar-brand" href="index.html">
-							<img src="app/img/logo.svg" style="width: 220px;height: 28px;"/>
-						</h1>
+				<div class="top-banner" ng-class="{'add-opacity-nav': isOpacityNav}"></div>
+				<div class="container">
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+						<div class="logo">
+							<h1>
+								<a class="navbar-brand" href="#/">
+								<img src="app/img/logo.svg" style="width: 220px;height: 28px;"/>
+							</h1>
+						</div>
 					</div>
-				</div>
 
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-					<nav class="link-effect-2" id="link-effect-2"> 
-						<ul class="nav navbar-nav">
-							<li class="isactive hide"><a href="" ng-click="toggleLeft();apply = true"><span data-hover="Menu">Menu</span></a></li>
-						</ul>
-					</nav>
-				</div>
-				<!--<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-					<nav class="link-effect-2" id="link-effect-2"> 
-						<ul class="nav navbar-nav">
-							<li class="isactive"><a href="index.html"><span data-hover="Home">Home</span></a></li>
-							<li><a href="plans.html"><span data-hover="Our Plans">Our Plans</span></a></li>
-							<li><a href="services.html"><span data-hover="Services">Services</span></a></li>
-							<li><a href="contact.html"><span data-hover="Contact US">Contact US</span></a></li>
-						</ul>
-					</nav>
-				</div>-->
-				<!-- /.navbar-collapse -->
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+						<nav class="link-effect-2" id="link-effect-2"> 
+							<ul class="nav navbar-nav">
+								<li class="isactive hide"><a href="" ng-click="toggleLeft();apply = true"><span data-hover="Menu">Menu</span></a>
+								</li>
+								<li ng-click="toggleLeft();apply = true"><span class="glyphicon glyphicon-menu-hamburger"> </span></li>
+							</ul>
+						</nav>
+					</div>
+					<!--<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+						<nav class="link-effect-2" id="link-effect-2"> 
+							<ul class="nav navbar-nav">
+								<li class="isactive"><a href="index.html"><span data-hover="Home">Home</span></a></li>
+								<li><a href="plans.html"><span data-hover="Our Plans">Our Plans</span></a></li>
+								<li><a href="services.html"><span data-hover="Services">Services</span></a></li>
+								<li><a href="contact.html"><span data-hover="Contact US">Contact US</span></a></li>
+							</ul>
+						</nav>
+					</div>-->
+					<!-- /.navbar-collapse -->
+					</div>
 			</nav>
-			<div class="banner-info" style="text-align:left">
+		<div class="container" style="margin-left: initial">
+			
+			<div class="banner-info" style="text-align:left;margin-top: 200px;">
 				<h2 style="font-weight: 500;text-transform: none;">Fast Wi-Fi for Everyone</h2>
-				<p style="font-size: 18px;">Introducing <b>KO Station</b>. Better connections, in more Public Places.</p>
+				<p style="font-size: 18px;line-height: 20px;">Introducing <b>KO Station</b>. Better connections, in more Public Places.</p>
 				<!--<div class="social_icons" style="margin-top: 55%">
 					<ul>
 						<li><a href="https://www.facebook.com/KOstationwifi/" target="_blank" class="icon icon-cube facebook"></a></li>
@@ -93,16 +100,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div layout="column"  ng-cloak>
   <section layout="row" flex>
     <md-sidenav class="md-sidenav-left" md-component-id="left"
-                md-whiteframe="4">
-      <md-toolbar class="md-theme-indigo">
+                md-whiteframe="4" style="width:260px;">
+      <md-toolbar class="md-theme-indigo" style="border-bottom: 1px solid #ededed;
+    background-color: #fff;color: #666;padding-left: 30px;">
         <h1 class="md-toolbar-tools">KO Station</h1>
+        <i class="header-icon material-icons-extended icon-close" ng-click="toggleLeft();apply = false" style="color: #464d51;margin-top: -44px;
+    margin-left: 185px;">close</i>
       </md-toolbar>
       <md-content layout-margin>
-        <p>
-          This sidenav is not showing any backdrop, where users can click on it, to close the sidenav.
-        </p>
+      	<ul class="links">
+
+      	<li class="nav-item">
+      		<a href="#/contact-us" target="_blank">Contact Us</a>
+
+        </li>
+
+
+      	<li class="nav-item"><a data-g-event="top nav" data-g-action="standard item click" data-g-label="Why speed matters" class="nav-link speedmatters" href="https://fiber.google.com/speedmatters/" target="_self">Why speed matters</a></li><li class="nav-item"><a data-g-event="top nav" data-g-action="standard item click" data-g-label="Community impact" class="nav-link community" href="https://fiber.google.com/community/" target="_self">Community impact</a></li></ul>
         <md-button ng-click="toggleLeft();apply = false" class="md-accent">
-          Close this Sidenav
+          
         </md-button>
       </md-content>
     </md-sidenav>
@@ -129,29 +145,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</ul>
 				</div>
 				<div class="col-md-2 footer-grid footer-grid1">
-					<h3 style="font-weight: 300;font-size: 23px;">Navigation</h3>
-					<ul>
-						<li style="color: #fff"><a href="#/" class="scroll">Home</a></li>
-						<!--<li style="color: #fff"><a href="#portfolio" class="scroll">Portfolio</a></li>
-						<li style="color: #fff"><a href="#services" class="scroll">Services</a></li>
-						<li style="color: #fff"><a href="#mail" class="scroll">Mail Us</a></li>-->
-					</ul>
+					<h3 style="font-weight: 300;font-size: 23px;">Powered By</h3>
+					<p>
+						<img src="app/img/joispot-logo.svg" style="width: 87px;height: 28px;" />
+					</p>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
 		</div>
 	</div>
-	<!--<div class="copy-right">
+	<div class="copy-right">
 		<div class="container">
 			<div class="social_icons">
 				<ul>
-					<li><a href="https://www.facebook.com/KOstationwifi/" target="_blank" class="icon icon-cube facebook"></a></li>
-					<li><a href="https://twitter.com/Kostationwifi" target="_blank" class="icon icon-cube rss"></a></li>
-					<li><a href="https://www.instagram.com/kostation/?hl=en" target="_blank" class="icon icon-cube instagram"></a></li>
+					<li><a href="https://www.facebook.com/KOstationwifi/" target="_blank" 
+					class="icon facebook"></a>
+					</li>
+					<li><a href="https://twitter.com/Kostationwifi" target="_blank" class="icon twitter"></a></li>
+					<li><a href="https://www.instagram.com/kostation/?hl=en" target="_blank" class="icon instagram"></a></li>
 				</ul>
 			</div>	
 		</div>
-	</div>-->
+	</div>
 <!-- //footer -->
 <!-- for bootstrap working -->
 	<script src="app/scripts/vendor/bootstrap.js"></script>
@@ -174,6 +189,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         <!-- Controllers -->
         <script src="app/scripts/controllers/MainController.js"></script>
-        
+        <script src="app/scripts/controllers/ContactController.js"></script>
+
+        <!-- Directives -->
+        <script src="app/scripts/services/directives/ngScroll.js"></script>
 </body>
 </html>

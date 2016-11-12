@@ -1,0 +1,55 @@
+<!-- Service Content -->
+   <div class="team service-text shadow">
+      <div class="container" style="width: 62%;">
+         <p class="aut autem"><b>KO Station</b> starts with a high speed internet connection. Super fast downloads. Direct pairing with youtube and torrent for buffer free streaming.</p>
+      </div>
+   </div>
+<!-- //Service Content-->
+
+<!-- contact -->
+   <div class="contact" id="mail">
+      <div class="container">
+         <h3>Contact Us</h3>
+         <p class="aut my-p-class" style="color: #444;font-weight: normal;font-size: 21px;">Enter your email address to get more information</p>
+
+         <div class="contact-grids shadow">
+            <div layout="column" ng-cloak>
+                 <div layout="column" ng-cloak class="md-inline-form">
+                 <div class="alert alert-success" role="alert" ng-show="isSent" style="margin: 15px;margin-bottom: 0px;text-align: center;">
+                  <strong>Well done!</strong> You'r message has been sent successfully.
+                </div>
+                    <md-content layout-padding>
+                     
+                        <form name="userForm" ng-submit="sendMail()">  
+                          <md-input-container class="md-block">
+                            <label>Name</label>
+                            <input ng-model="user.name">
+                          </md-input-container>
+                          <md-input-container class="md-block">
+                            <label>Contact No</label>
+                            <input ng-model="user.contactno">
+                          </md-input-container>
+                          <md-input-container class="md-block">
+                            <label>Email</label>
+                            <input ng-model="user.email" type="email">
+                          </md-input-container>          
+                          <md-input-container class="md-block">
+                            <label>Message</label>
+                            <textarea ng-model="user.message" rows="5" md-select-on-focus></textarea>
+                          </md-input-container>
+
+                     
+                      <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+                        
+                        <md-button md-no-ink class="md-primary kostation-button shadow" type="submit">SEND</md-button>
+                        
+                        
+                      </section>
+                      </form>
+                    </md-content>
+                  </div>
+               </div>            
+         </div>
+      </div>
+   </div>
+<!-- //contact -->
