@@ -1,0 +1,153 @@
+[30-Aug-2016 22:50:34 UTC] exception 'ErrorException' with message 'mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES)' in /home/lha8aqami/public_html/App/api/v1/dbConnect.php:18
+Stack trace:
+#0 [internal function]: Slim\Slim::handleErrors(2, 'mysqli::mysqli(...', '/home/lha8aqami...', 18, Array)
+#1 /home/lha8aqami/public_html/App/api/v1/dbConnect.php(18): mysqli->mysqli('localhost', 'root', 'root', 'ApplicationDB')
+#2 /home/lha8aqami/public_html/App/api/v1/dbHandler.php(11): dbConnect->connect()
+#3 /home/lha8aqami/public_html/App/api/v1/authentication.php(4): DbHandler->__construct()
+#4 [internal function]: {closure}()
+#5 /home/lha8aqami/public_html/App/api/libs/Slim/Route.php(436): call_user_func_array(Object(Closure), Array)
+#6 /home/lha8aqami/public_html/App/api/libs/Slim/Slim.php(1307): Slim\Route->dispatch()
+#7 /home/lha8aqami/public_html/App/api/libs/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#8 /home/lha8aqami/public_html/App/api/libs/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#9 /home/lha8aqami/public_html/App/api/libs/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#10 /home/lha8aqami/public_html/App/api/libs/Slim/Slim.php(1254): Slim\Middleware\PrettyExceptions->call()
+#11 /home/lha8aqami/public_html/App/api/v1/index.php(63): Slim\Slim->run()
+#12 {main}
+[30-Aug-2016 22:52:37 UTC] exception 'ErrorException' with message 'mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES)' in /home/lha8aqami/public_html/App/api/v1/dbConnect.php:18
+Stack trace:
+#0 [internal function]: Slim\Slim::handleErrors(2, 'mysqli::mysqli(...', '/home/lha8aqami...', 18, Array)
+#1 /home/lha8aqami/public_html/App/api/v1/dbConnect.php(18): mysqli->mysqli('localhost', 'root', 'root', 'ApplicationDB')
+#2 /home/lha8aqami/public_html/App/api/v1/dbHandler.php(11): dbConnect->connect()
+#3 /home/lha8aqami/public_html/App/api/v1/authentication.php(17): DbHandler->__construct()
+#4 [internal function]: {closure}()
+#5 /home/lha8aqami/public_html/App/api/libs/Slim/Route.php(436): call_user_func_array(Object(Closure), Array)
+#6 /home/lha8aqami/public_html/App/api/libs/Slim/Slim.php(1307): Slim\Route->dispatch()
+#7 /home/lha8aqami/public_html/App/api/libs/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#8 /home/lha8aqami/public_html/App/api/libs/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#9 /home/lha8aqami/public_html/App/api/libs/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#10 /home/lha8aqami/public_html/App/api/libs/Slim/Slim.php(1254): Slim\Middleware\PrettyExceptions->call()
+#11 /home/lha8aqami/public_html/App/api/v1/index.php(63): Slim\Slim->run()
+#12 {main}
+[30-Aug-2016 22:53:13 UTC] exception 'ErrorException' with message 'mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES)' in /home/lha8aqami/public_html/App/api/v1/dbConnect.php:18
+Stack trace:
+#0 [internal function]: Slim\Slim::handleErrors(2, 'mysqli::mysqli(...', '/home/lha8aqami...', 18, Array)
+#1 /home/lha8aqami/public_html/App/api/v1/dbConnect.php(18): mysqli->mysqli('localhost', 'root', 'root', 'ApplicationDB')
+#2 /home/lha8aqami/public_html/App/api/v1/dbHandler.php(11): dbConnect->connect()
+#3 /home/lha8aqami/public_html/App/api/v1/authentication.php(4): DbHandler->__construct()
+#4 [internal function]: {closure}()
+#5 /home/lha8aqami/public_html/App/api/libs/Slim/Route.php(436): call_user_func_array(Object(Closure), Array)
+#6 /home/lha8aqami/public_html/App/api/libs/Slim/Slim.php(1307): Slim\Route->dispatch()
+#7 /home/lha8aqami/public_html/App/api/libs/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#8 /home/lha8aqami/public_html/App/api/libs/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#9 /home/lha8aqami/public_html/App/api/libs/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#10 /home/lha8aqami/public_html/App/api/libs/Slim/Slim.php(1254): Slim\Middleware\PrettyExceptions->call()
+#11 /home/lha8aqami/public_html/App/api/v1/index.php(63): Slim\Slim->run()
+#12 {main}
+[01-Sep-2016 19:23:41 UTC] exception 'ErrorException' with message 'Object of class stdClass could not be converted to string' in /home/lha8aqami/public_html/Dev/api/v1/aplicantionService.php:270
+Stack trace:
+#0 /home/lha8aqami/public_html/Dev/api/v1/aplicantionService.php(270): Slim\Slim::handleErrors(4096, 'Object of class...', '/home/lha8aqami...', 270, Array)
+#1 [internal function]: {closure}()
+#2 /home/lha8aqami/public_html/Dev/api/libs/Slim/Route.php(436): call_user_func_array(Object(Closure), Array)
+#3 /home/lha8aqami/public_html/Dev/api/libs/Slim/Slim.php(1307): Slim\Route->dispatch()
+#4 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#5 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#6 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#7 /home/lha8aqami/public_html/Dev/api/libs/Slim/Slim.php(1254): Slim\Middleware\PrettyExceptions->call()
+#8 /home/lha8aqami/public_html/Dev/api/v1/index.php(63): Slim\Slim->run()
+#9 {main}
+[01-Sep-2016 19:24:50 UTC] exception 'ErrorException' with message 'Object of class stdClass could not be converted to string' in /home/lha8aqami/public_html/Dev/api/v1/aplicantionService.php:269
+Stack trace:
+#0 /home/lha8aqami/public_html/Dev/api/v1/aplicantionService.php(269): Slim\Slim::handleErrors(4096, 'Object of class...', '/home/lha8aqami...', 269, Array)
+#1 [internal function]: {closure}()
+#2 /home/lha8aqami/public_html/Dev/api/libs/Slim/Route.php(436): call_user_func_array(Object(Closure), Array)
+#3 /home/lha8aqami/public_html/Dev/api/libs/Slim/Slim.php(1307): Slim\Route->dispatch()
+#4 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#5 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#6 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#7 /home/lha8aqami/public_html/Dev/api/libs/Slim/Slim.php(1254): Slim\Middleware\PrettyExceptions->call()
+#8 /home/lha8aqami/public_html/Dev/api/v1/index.php(63): Slim\Slim->run()
+#9 {main}
+[01-Sep-2016 19:26:39 UTC] exception 'ErrorException' with message 'Object of class stdClass could not be converted to string' in /home/lha8aqami/public_html/Dev/api/v1/aplicantionService.php:269
+Stack trace:
+#0 /home/lha8aqami/public_html/Dev/api/v1/aplicantionService.php(269): Slim\Slim::handleErrors(4096, 'Object of class...', '/home/lha8aqami...', 269, Array)
+#1 [internal function]: {closure}()
+#2 /home/lha8aqami/public_html/Dev/api/libs/Slim/Route.php(436): call_user_func_array(Object(Closure), Array)
+#3 /home/lha8aqami/public_html/Dev/api/libs/Slim/Slim.php(1307): Slim\Route->dispatch()
+#4 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#5 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#6 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#7 /home/lha8aqami/public_html/Dev/api/libs/Slim/Slim.php(1254): Slim\Middleware\PrettyExceptions->call()
+#8 /home/lha8aqami/public_html/Dev/api/v1/index.php(63): Slim\Slim->run()
+#9 {main}
+[01-Sep-2016 20:18:38 UTC] exception 'ErrorException' with message 'mysqli::query(): Empty query' in /home/lha8aqami/public_html/Dev/api/v1/dbHandler.php:28
+Stack trace:
+#0 [internal function]: Slim\Slim::handleErrors(2, 'mysqli::query()...', '/home/lha8aqami...', 28, Array)
+#1 /home/lha8aqami/public_html/Dev/api/v1/dbHandler.php(28): mysqli->query('')
+#2 /home/lha8aqami/public_html/Dev/api/v1/aplicantionService.php(128): DbHandler->executeQuery('')
+#3 [internal function]: {closure}()
+#4 /home/lha8aqami/public_html/Dev/api/libs/Slim/Route.php(436): call_user_func_array(Object(Closure), Array)
+#5 /home/lha8aqami/public_html/Dev/api/libs/Slim/Slim.php(1307): Slim\Route->dispatch()
+#6 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#7 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#8 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#9 /home/lha8aqami/public_html/Dev/api/libs/Slim/Slim.php(1254): Slim\Middleware\PrettyExceptions->call()
+#10 /home/lha8aqami/public_html/Dev/api/v1/index.php(63): Slim\Slim->run()
+#11 {main}
+[01-Sep-2016 20:20:37 UTC] exception 'ErrorException' with message 'mysqli::query(): Empty query' in /home/lha8aqami/public_html/Dev/api/v1/dbHandler.php:28
+Stack trace:
+#0 [internal function]: Slim\Slim::handleErrors(2, 'mysqli::query()...', '/home/lha8aqami...', 28, Array)
+#1 /home/lha8aqami/public_html/Dev/api/v1/dbHandler.php(28): mysqli->query('')
+#2 /home/lha8aqami/public_html/Dev/api/v1/aplicantionService.php(128): DbHandler->executeQuery('')
+#3 [internal function]: {closure}()
+#4 /home/lha8aqami/public_html/Dev/api/libs/Slim/Route.php(436): call_user_func_array(Object(Closure), Array)
+#5 /home/lha8aqami/public_html/Dev/api/libs/Slim/Slim.php(1307): Slim\Route->dispatch()
+#6 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#7 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#8 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#9 /home/lha8aqami/public_html/Dev/api/libs/Slim/Slim.php(1254): Slim\Middleware\PrettyExceptions->call()
+#10 /home/lha8aqami/public_html/Dev/api/v1/index.php(63): Slim\Slim->run()
+#11 {main}
+[01-Sep-2016 20:26:13 UTC] exception 'ErrorException' with message 'Creating default object from empty value' in /home/lha8aqami/public_html/Dev/api/v1/aplicantionService.php:42
+Stack trace:
+#0 /home/lha8aqami/public_html/Dev/api/v1/aplicantionService.php(42): Slim\Slim::handleErrors(2, 'Creating defaul...', '/home/lha8aqami...', 42, Array)
+#1 [internal function]: {closure}()
+#2 /home/lha8aqami/public_html/Dev/api/libs/Slim/Route.php(436): call_user_func_array(Object(Closure), Array)
+#3 /home/lha8aqami/public_html/Dev/api/libs/Slim/Slim.php(1307): Slim\Route->dispatch()
+#4 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#5 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#6 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#7 /home/lha8aqami/public_html/Dev/api/libs/Slim/Slim.php(1254): Slim\Middleware\PrettyExceptions->call()
+#8 /home/lha8aqami/public_html/Dev/api/v1/index.php(63): Slim\Slim->run()
+#9 {main}
+[01-Sep-2016 20:36:15 UTC] PHP Fatal error:  Call to undefined function UpdateTable() in /home/lha8aqami/public_html/Dev/api/v1/aplicantionService.php on line 38
+[01-Sep-2016 20:37:36 UTC] PHP Fatal error:  Call to undefined function UpdateTable() in /home/lha8aqami/public_html/Dev/api/v1/aplicantionService.php on line 38
+[01-Sep-2016 20:38:37 UTC] exception 'ErrorException' with message 'Invalid argument supplied for foreach()' in /home/lha8aqami/public_html/Dev/api/v1/dbHandler.php:67
+Stack trace:
+#0 /home/lha8aqami/public_html/Dev/api/v1/dbHandler.php(67): Slim\Slim::handleErrors(2, 'Invalid argumen...', '/home/lha8aqami...', 67, Array)
+#1 /home/lha8aqami/public_html/Dev/api/v1/aplicantionService.php(38): DbHandler->UpdateTable(Object(stdClass), NULL, 'applicantsInfoT...', ' WHERE id=1000')
+#2 [internal function]: {closure}()
+#3 /home/lha8aqami/public_html/Dev/api/libs/Slim/Route.php(436): call_user_func_array(Object(Closure), Array)
+#4 /home/lha8aqami/public_html/Dev/api/libs/Slim/Slim.php(1307): Slim\Route->dispatch()
+#5 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#6 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#7 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#8 /home/lha8aqami/public_html/Dev/api/libs/Slim/Slim.php(1254): Slim\Middleware\PrettyExceptions->call()
+#9 /home/lha8aqami/public_html/Dev/api/v1/index.php(63): Slim\Slim->run()
+#10 {main}
+[01-Sep-2016 20:42:29 UTC] exception 'ErrorException' with message 'Invalid argument supplied for foreach()' in /home/lha8aqami/public_html/Dev/api/v1/dbHandler.php:67
+Stack trace:
+#0 /home/lha8aqami/public_html/Dev/api/v1/dbHandler.php(67): Slim\Slim::handleErrors(2, 'Invalid argumen...', '/home/lha8aqami...', 67, Array)
+#1 /home/lha8aqami/public_html/Dev/api/v1/aplicantionService.php(38): DbHandler->UpdateTable(Object(stdClass), NULL, 'applicantsInfoT...', ' WHERE id=1000')
+#2 [internal function]: {closure}()
+#3 /home/lha8aqami/public_html/Dev/api/libs/Slim/Route.php(436): call_user_func_array(Object(Closure), Array)
+#4 /home/lha8aqami/public_html/Dev/api/libs/Slim/Slim.php(1307): Slim\Route->dispatch()
+#5 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#6 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#7 /home/lha8aqami/public_html/Dev/api/libs/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#8 /home/lha8aqami/public_html/Dev/api/libs/Slim/Slim.php(1254): Slim\Middleware\PrettyExceptions->call()
+#9 /home/lha8aqami/public_html/Dev/api/v1/index.php(63): Slim\Slim->run()
+#10 {main}
+[01-Sep-2016 21:46:49 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/lha8aqami/public_html/Dev/api/v1/aplicantionService.php on line 21
+[01-Sep-2016 21:46:49 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/lha8aqami/public_html/Dev/api/v1/aplicantionService.php on line 21
+[01-Sep-2016 21:46:50 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/lha8aqami/public_html/Dev/api/v1/aplicantionService.php on line 21
+[01-Sep-2016 21:46:56 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/lha8aqami/public_html/Dev/api/v1/aplicantionService.php on line 21
