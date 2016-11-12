@@ -1,0 +1,14 @@
+get carousal images
+http://localhost/git/php/api/v1/getCarousalData : get
+
+delete carousal image 
+http://localhost/git/php/api/v1/delteCarousalImage  : post 
+payload : {"id":3}
+
+Login service
+http://localhost/git/php/api/v1/login : post
+payload :  {"customer":{"email":"admin@admin.com","password":"admin"}}
+
+signup service
+http://localhost/git/php/api/v1/signUp : post
+payload : {"customer":{"email":"abc@abc.com","password":"abc","name":"abc","phone":"1231231231","address":"abc"}}
