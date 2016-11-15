@@ -97,13 +97,13 @@ body a:hover{
 	outline:none;
 }
 .banner{
-	background:url(../img/banner5.jpg) no-repeat 0px 0px;
+	/*background:url(../img/banner5.jpg) no-repeat 0px 0px;*/
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
 	-ms-background-size:cover;
-	min-height:800px;
+	/*min-height:800px;*/
 }
 .more {
 		margin-bottom:12em;
@@ -835,7 +835,7 @@ a.play-icon span {
 }
 .footer-grid ul li i{
 	color: #999;
-		border: 1px solid #999;
+		border: 2px solid #424242;
 		padding:.5em;
 		border-radius: 100%;
 	-webkit-border-radius: 100%;
@@ -935,7 +935,7 @@ a.play-icon span {
 		margin: 11em auto 0;
 	}
 	.banner {
-		min-height: 700px;
+		/*min-height: 700px;*/
 	}
 	.more {
 		margin-bottom: 10em;
@@ -955,7 +955,7 @@ a.play-icon span {
 		margin-bottom:9em;
 	}
 	.banner {
-		min-height: 655px;
+		/*min-height: 655px;*/
 	}
 	.about, .about-bottom, .team, .portfolio, .services, .contact {
 		padding: 4em 0;
@@ -1018,7 +1018,7 @@ a.play-icon span {
 		margin-bottom: 7em;
 	}
 	.banner {
-		min-height: 570px;
+		/*min-height: 570px;*/
 	}
 	.w3_about_grid_left h3 {
 		margin: 0;
@@ -1173,7 +1173,7 @@ a.play-icon span {
 	}
 	.banner {
 		padding-bottom: 2em;
-		min-height: 500px;
+		/*min-height: 500px;*/
 	}
 	.agileinfo_about_grids_bottom_right img {
 		margin: 0 0 0 12em;
@@ -1278,7 +1278,7 @@ a.play-icon span {
 		margin: 4em auto 0;
 	}
 	.banner {
-		min-height: 450px;
+		/*min-height: 450px;*/
 	}
 }
 @media (max-width:480px){
@@ -1376,7 +1376,7 @@ a.play-icon span {
 		margin-bottom: 3em;
 	}
 	.banner {
-		min-height: 440px;
+		/*min-height: 440px;*/
 		background-position: -230px 0px;
 		padding-bottom: 1em;
 	}
@@ -1519,7 +1519,7 @@ a.play-icon span {
 		margin: 3em auto 0;
 	}
 	.banner {
-		min-height: 390px;
+		/*min-height: 390px;*/
 	}
 	.more a {
 		padding: 6px 30px;
@@ -1648,7 +1648,7 @@ p.aut.autem {
 	display: none;
 }
 .footer-grid ul li i {
-	color: #fff;
+	color: #424242;
 }
 
 .fixed-navbar {
@@ -1738,6 +1738,27 @@ a.instagram {
 }
 .links li a {
 	padding-left: 30px;
+}
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 /* Custom CSS end here */
 

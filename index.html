@@ -37,7 +37,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 <body ng-controller="MainController" scroll>
 <!-- banner -->
-	<div class="banner">
+	<div class="banner" style="position: relative; z-index: 1;">
 		<nav class="navbar navbar-default fixed-navbar">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="top-banner" ng-class="{'add-opacity-nav': isOpacityNav}"></div>
@@ -80,7 +80,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<!-- /.navbar-collapse -->
 					</div>
 			</nav>
-		<div class="container" style="margin-left: initial">
+		<div class="container" style="margin-left: initial;position: absolute;">
 			
 			<div class="banner-info" style="text-align:left;margin-top: 200px;">
 				<h2 style="font-weight: 500;text-transform: none;">Fast Wi-Fi for Everyone</h2>
@@ -97,6 +97,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 <!-- //banner -->
 
+<header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('app/img/banner5.jpg');"></div>
+                
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('app/img/banner5.jpg');"></div>
+                
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('app/img/banner5.jpg');"></div>
+                
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </header>
+
 	<div layout="column"  ng-cloak>
   <section layout="row" flex>
     <md-sidenav class="md-sidenav-left" md-component-id="left"
@@ -109,14 +146,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       </md-toolbar>
       <md-content layout-margin>
       	<ul class="links">
-
-      	<li class="nav-item">
-      		<a href="#/contact-us" target="_blank">Contact Us</a>
-
-        </li>
-
-
-      	<li class="nav-item"><a data-g-event="top nav" data-g-action="standard item click" data-g-label="Why speed matters" class="nav-link speedmatters" href="https://fiber.google.com/speedmatters/" target="_self">Why speed matters</a></li><li class="nav-item"><a data-g-event="top nav" data-g-action="standard item click" data-g-label="Community impact" class="nav-link community" href="https://fiber.google.com/community/" target="_self">Community impact</a></li></ul>
+	      	<li class="nav-item">
+	      		<a href="#/contact-us" target="_blank">Contact Us</a>
+	        </li>
+	      	<!--<li class="nav-item">
+	      		<a data-g-event="top nav" data-g-action="standard item click" data-g-label="Why speed matters" class="nav-link speedmatters" href="https://fiber.google.com/speedmatters/" target="_self">Why speed matters</a>
+	      	</li>
+	      	<li class="nav-item">
+	      		<a data-g-event="top nav" data-g-action="standard item click" data-g-label="Community impact" class="nav-link community" href="https://fiber.google.com/community/" target="_self">Community impact</a>
+	      	</li>-->
+      	</ul>
         <md-button ng-click="toggleLeft();apply = false" class="md-accent">
           
         </md-button>
@@ -129,25 +168,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 <!-- footer -->
-	<div class="footer">
+	<div class="footer" style="background: #c2c2c2;">
 		<div class="container">
 			<div class="footer-grids">
 				<div class="col-md-5 footer-grid">
-					<h3 style="font-weight: 300;font-size: 23px;">About Us</h3>
-					<p style="color: #fff;font-size: 15px;">We are here to Digitize your city with high speed wifi and start a new era of modernization. A single point access provider, bringing into the public placses. It is currently PCMC’s largest internet services provider.</p>
+					<h3 style="color: #424242;font-weight: 300;font-size: 18px;">Find Us</h3>
+					<p style="color: #424242;font-size: 15px;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.336363912532!2d73.75114241445948!3d18.60393468736047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b97c83fdbfa9%3A0x28f8e72980bfb576!2sZen+Business+Centre!5e0!3m2!1sen!2sin!4v1479060705289" width="350" height="200" frameborder="0" style="border:0" allowfullscreen></iframe></p>
 				</div>
 				<div class="col-md-5 footer-grid">
-					<h3 style="font-weight: 300;font-size: 23px;">Contact Info</h3>
+					<h3 style="color: #424242;font-weight: 300;font-size: 18px;">Contact Info</h3>
 					<ul>
-						<li style="color: #fff"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>109, Zen Business Center, <span>Mumbai - Banglore Highway,</span><span>Bhumkar Chwok, Wakad, Pune - 411 057.</span></li>
-						<li style="color: #fff"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>info@kostation.com</li>
-						<li style="color: #fff"><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+91 8928920000</li>
+						<li style="color: #424242"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>109, Zen Business Center, <span>Mumbai - Banglore Highway,</span><span>Bhumkar Chwok, Wakad, Pune - 411 057.</span></li>
+						<li style="color: #424242"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>info@kostation.com</li>
+						<li style="color: #424242"><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+91 8928920000</li>
 					</ul>
 				</div>
 				<div class="col-md-2 footer-grid footer-grid1">
-					<h3 style="font-weight: 300;font-size: 23px;">Powered By</h3>
+					<h3 style="color: #424242;font-weight: 300;font-size: 18px;">Powered By</h3>
 					<p>
-						<img src="app/img/joispot-logo.svg" style="width: 87px;height: 28px;" />
+						<img src="app/img/joispot-logo.svg" style="width: 143px;height: 60px;" />
 					</p>
 				</div>
 				<div class="clearfix"> </div>
