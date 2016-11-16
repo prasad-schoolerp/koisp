@@ -11,6 +11,10 @@ koStation.config(function($routeProvider){
     .when('/', {
     	controller: 'MainController',
         templateUrl: 'app/views/home.html'
+    })
+    .when('/contact-us', {
+    	controller: 'ContactController',
+        templateUrl: 'app/views/contact.html'
     });
     
     return koStation; 
