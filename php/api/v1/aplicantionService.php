@@ -15,6 +15,23 @@ $app->get('/getCarousalData', function() {
   } 
 });
 
+$app->post('/insertImgName', function() use ($app) {
+  $db = new DbHandler();
+  $data = json_decode($app->request->getBody());
+  $column_names = array("path", "isDeleted", "isActive");
+
+  $result = $db->insertIntoTable($data, $column_names, "carousal");
+   if ($result != NULL) {
+    $response["status"] = "success";
+    $response["message"] = "Data fetched successfully";
+    $response["data"]=$result;
+    echoResponse(200, $response);
+  } else {
+    $response["status"] = "error";
+    $response["message"] = "Failed to update data";
+    echoResponse(201, $response);
+  } 
+});
 //Mark a carousal image as deleted in the database
 $app->post('/delteCarousalImage', function() use ($app) {
  $response = array();

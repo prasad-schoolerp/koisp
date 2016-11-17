@@ -16,10 +16,16 @@ $(document).ready(function (e) {
             {
                 if(res=="success")
                 {
-					//implement sevice of inserting image name into carousal db
-                           // Data.get('upadteImgName').then(function (results) {
-							// Data.toast(results);
-						// });
+			var a = "img"+"-"+Date.now() +"." + $("#file").val().split('.').pop();
+										Data.post('insertImgName', {
+        										"path":a,"isDeleted":0,"isActive":0
+
+    }).then(function (results) {
+        Data.toast(results);
+        $scope.loadList();
+    });
+			
+					
                             alert(res);
                 }
                 else
