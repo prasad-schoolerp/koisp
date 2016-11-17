@@ -15,6 +15,10 @@ koStation.config(function($routeProvider){
     .when('/contact-us', {
     	controller: 'ContactController',
         templateUrl: 'app/views/contact.html'
+    })
+    .when('/plans', {
+        controller: 'PlansController',
+        templateUrl: 'app/views/plans.html'
     });
     
     return koStation; 
