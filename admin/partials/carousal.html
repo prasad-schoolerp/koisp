@@ -1,0 +1,49 @@
+<div id="page-wrapper">
+	<!-- Header -->
+	<div id="header-wrapper">
+		<header id="header" class="container">
+			<div id="logo">
+				<h1><a href="#">KOStation</a></h1>
+			</div>
+			<nav id="nav">
+				<ul>
+				
+				<li  id="menuRegister"  ><a href="#/plans">Plans</a></li>
+
+				 <li class="current"><a href="#/carousal">Carousal</a></li>
+					
+					<li><a href="" ng-click="logout()">Logout</a></li>
+				</ul>
+			</nav>
+		</header>
+	</div>  
+	<div id="banner-wrapper">
+		<div id="banner" class="box container">
+			<div class="row">
+				<div class="16u pure-form">
+							<form id="uploadForm"  method="post" action="upload.php" class="form-horizontal pure-form pure-form-stacked" enctype="multipart/form-data">
+
+					<fieldset class="pure-group">
+						<legend><b>Search Applicants</b></legend>
+						<label for="file">Select image
+													<input  type="file" name="file" id="file" accept="image/*"/>
+													</label>
+							
+																		<button type="submit">submit</button>
+
+							
+									
+					</fieldset>
+							</form>
+
+					</div>
+				</div>                           
+			</div>
+
+		</div>
+		<div ng-include src="'partials/footer.html'"></div>
+
+	</div>
+
+
+

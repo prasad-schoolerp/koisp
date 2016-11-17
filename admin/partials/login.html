@@ -1,0 +1,25 @@
+ <div id="header-wrapper">
+    <header id="header" class="container">
+      <!-- Logo -->
+        <div id="logo">
+          <h1><a href="#">KOStation</a></h1>
+        </div>
+    </header>
+  </div> 
+
+	<div id="banner-wrapper">
+		<div id="banner" class="box container">
+			<div class="row">
+				<div class="12u" align="center">
+					<form class="pure-form"  role="form" ng-submit="doLogin(login)">
+						<fieldset class="pure-group">
+							<input type="email" class="pure-input-2-3" placeholder="Email Id" ng-model="login.email" required focus>
+							<input type="password" class="pure-input-2-3" placeholder="Password" ng-model="login.password" required>
+							<button type="submit" class="pure-button pure-input-2-3 pure-button-primary"   data-ng-disabled="loginForm.$invalid">Sign in</button>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
