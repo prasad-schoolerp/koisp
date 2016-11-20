@@ -33,9 +33,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	});
 </script>
 <!-- start-smoth-scrolling -->
-</head>
-	
-<body ng-controller="MainController" scroll>
+</head>	
+<body ng-controller="MainController" scroll ng-init="saveScreen('home')">
 <!-- banner -->
 	<div class="banner" style="position: relative; z-index: 1;">
 		<nav class="navbar navbar-default fixed-navbar">
@@ -97,42 +96,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 <!-- //banner -->
 
-<header id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for Slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <!-- Set the first background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('app/img/banner5.jpg');"></div>
-                
-            </div>
-            <div class="item">
-                <!-- Set the second background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('app/img/banner5.jpg');"></div>
-                
-            </div>
-            <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('app/img/banner5.jpg');"></div>
-                
-            </div>
-        </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
-
-    </header>
 
 	<div layout="column"  ng-cloak>
   <section layout="row" flex>
@@ -146,6 +109,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       </md-toolbar>
       <md-content layout-margin>
       	<ul class="links">
+      		<li class="nav-item">
+	      		<a href="#/plans" target="_blank">Our Plans</a>
+	        </li>
 	      	<li class="nav-item">
 	      		<a href="#/contact-us" target="_blank">Contact Us</a>
 	        </li>
@@ -233,5 +199,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         <!-- Directives -->
         <script src="app/scripts/services/directives/ngScroll.js"></script>
+        <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    $('a[title]').tooltip();
+    </script>
 </body>
 </html>

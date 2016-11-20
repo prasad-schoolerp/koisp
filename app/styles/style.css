@@ -1748,6 +1748,9 @@ a.instagram {
 .carousel-inner {
     height: 100%;
 }
+.selected {
+	background-color: #3c763d
+}
 
 /* Background images are set within the HTML using inline CSS, not here */
 
@@ -1763,6 +1766,12 @@ a.instagram {
 
 .md-active {
 	color: #0091ea!important;
+}
+.table, .table > thead > tr > th {
+	text-align: center;
+}
+p.narrow {
+	margin: 27px auto;
 }
 /* Custom CSS end here */
 
@@ -1908,60 +1917,70 @@ span.round-tabs{
 }
 
 span.round-tabs.one{
-    color: rgb(34, 194, 34);border: 2px solid rgb(34, 194, 34);
+    color: rgb(34, 194, 34);border: 2px solid #ddd;
 }
 
 li.active span.round-tabs.one{
     background: #fff !important;
-    border: 2px solid #ddd;
+    border: 2px solid #565151;
     color: rgb(34, 194, 34);
 }
 
 span.round-tabs.two{
-    color: #febe29;border: 2px solid #febe29;
+    color: #febe29;border: 2px solid #ddd;
 }
 
 li.active span.round-tabs.two{
     background: #fff !important;
-    border: 2px solid #ddd;
+    border: 2px solid #565151;
     color: #febe29;
 }
 
 span.round-tabs.three{
-    color: #3e5e9a;border: 2px solid #3e5e9a;
+    color: #3e5e9a;border: 2px solid #ddd;
 }
 
 li.active span.round-tabs.three{
     background: #fff !important;
-    border: 2px solid #ddd;
+    border: 2px solid #565151;
     color: #3e5e9a;
 }
 
 span.round-tabs.four{
-    color: #f1685e;border: 2px solid #f1685e;
+    color: #f1685e;border: 2px solid #ddd;
 }
 
 li.active span.round-tabs.four{
     background: #fff !important;
-    border: 2px solid #ddd;
+    border: 2px solid #565151;
     color: #f1685e;
 }
 
 span.round-tabs.five{
-    color: #999;border: 2px solid #999;
+    color: #999;border: 2px solid #ddd;
 }
 
 li.active span.round-tabs.five{
     background: #fff !important;
-    border: 2px solid #ddd;
+    border: 2px solid #565151;
     color: #999;
+}
+
+span.round-tabs.six{
+    color: #000;border: 2px solid #ddd;
+}
+
+li.active span.round-tabs.six{
+    background: #fff !important;
+    border: 2px solid #565151;
+    color: green;
 }
 
 .nav-tabs > li.active > a span.round-tabs{
     background: #fafafa;
 }
 .nav-tabs > li {
-    width: 20%;
+    width: 16%;
 }
 /*li.active:before {
     content: " ";
@@ -1983,7 +2002,7 @@ li.active span.round-tabs.five{
     margin: 0 auto;
     bottom: 0px;
     border: 5px solid transparent;
-    border-bottom-color: #ddd;
+    border-bottom-color: #0091ea;
     transition:0.1s ease-in-out;
     
 }
@@ -1995,7 +2014,7 @@ li.active span.round-tabs.five{
     margin: 0 auto;
     bottom: 0px;
     border: 10px solid transparent;
-    border-bottom-color: #ddd;
+    border-bottom-color: #0091ea;
     
 }
 .nav-tabs > li a{
@@ -2070,3 +2089,4 @@ left: 35%;
 }
 
 /*End Tabs*/
+

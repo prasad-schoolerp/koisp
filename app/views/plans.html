@@ -1,3 +1,5 @@
+ <div class="portfolio-video"> </div>
+
 <!-- Connect with us -->
    <div class="team" style="background: #eee">
       <h3 style="text-align: center;font-size: 40px;color: #424242;">Our Plans</h3>
@@ -7,107 +9,193 @@
    </div>
 <!-- //Connect with us -->
 
-
-<section style="background:#efefe9;" ng-init="showTab = 'home'">
-        <div class="container">
-            <div class="row">
-                <div class="board">
-                    <!-- <h2>Welcome to IGHALO!<sup>™</sup></h2>-->
-                    <div class="board-inner">
+<section style="background:#efefe9;" ng-init="showTab = 'facebook'">
+    <div class="container">
+        <div class="row">
+            <div class="board">
+                <!-- <h2>Welcome to IGHALO!<sup>™</sup></h2>-->
+                <div class="board-inner">
                     <ul class="nav nav-tabs" id="myTab">
-                    <div class="liner"></div>
-                     <li class="active">
-                     <a href="" ng-click="showTab = 'home'" data-toggle="tab" title="welcome">
-                      <span class="round-tabs one">
-                              <i><img src="app/img/sms.png" style="vertical-align: initial;width: 35px;height: 35px" /></i>
-                      </span> 
-                  </a></li>
+                        <div class="liner"></div>
+                        <li class="active">
+                            <a href="" ng-click="showTab = 'facebook'" data-toggle="tab" title="welcome">
+                                <span class="round-tabs one">
+                              <i><img src="app/img/tab-facebook.png" style="width: 50px;height: 50px;margin-top: -7px;" /></i>
+                      </span>
+                            </a>
+                        </li>
 
-                  <li><a href="" ng-click="showTab = 'profile'" data-toggle="tab" title="profile">
-                     <span class="round-tabs two">
-                         <i class="glyphicon glyphicon-user"></i>
-                     </span> 
-           </a>
-                 </li>
-                 <li><a href="" ng-click="showTab = 'messages'" data-toggle="tab" title="bootsnipp goodies">
-                     <span class="round-tabs three">
-                          <i class="glyphicon glyphicon-gift"></i>
+                        <li>
+                            <a href="" ng-click="showTab = 'whatsapp'" data-toggle="tab" title="profile">
+                                <span class="round-tabs two">
+                         <i><img src="app/img/WhatsApp.png" style="vertical-align: sub;width: 40px;height: 40px"></i>
+                     </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" ng-click="showTab = 'sms'" data-toggle="tab" title="bootsnipp goodies">
+                                <span class="round-tabs three">
+                          <i><img src="app/img/sms.png" style="vertical-align: initial;width: 35px;height: 35px" /></i>
                      </span> </a>
-                     </li>
+                        </li>
 
-                     <li><a href="" ng-click="showTab = 'settings'" data-toggle="tab" title="blah blah">
-                         <span class="round-tabs four">
-                              <i class="glyphicon glyphicon-comment"></i>
-                         </span> 
-                     </a></li>
+                        <li>
+                            <a href="" ng-click="showTab = 'station'" data-toggle="tab" title="blah blah">
+                                <span class="round-tabs four">
+                              <i><img src="app/img/station.png" style="vertical-align: sub;width: 40px;height: 40px" /></i>
+                         </span>
+                            </a>
+                        </li>
 
-                     <li><a href="" ng-click="showTab = 'doner'" data-toggle="tab" title="completed">
-                         <span class="round-tabs five">
+                        <li>
+                            <a href="" ng-click="showTab = 'promotion'" data-toggle="tab" title="completed">
+                                <span class="round-tabs five">
+                              <i><img src="app/img/promotion.png" style="vertical-align: sub;width: 40px;height: 40px" /></i>
+                         </span> </a>
+                        </li>
+
+                        <li>
+                            <a href="" ng-click="showTab = 'ok'" data-toggle="tab" title="completed">
+                                <span class="round-tabs six">
                               <i class="glyphicon glyphicon-ok"></i>
                          </span> </a>
-                     </li>
-                     
-                     </ul></div>
+                        </li>
 
-                     <div class="tab-content">
-                      <div class="tab-pane fade" id="home" ng-class="{'in active':showTab === 'home'}" ng-show="showTab === 'home'">
+                    </ul>
+                </div>
 
-                          <h3 class="head text-center">Welcome to Bootsnipp<sup>™</sup> <span style="color:#f48260;">♥</span></h3>
-                          <p class="narrow text-center">
-                              Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
-                          </p>
-                          
-                          <p class="text-center">
-                    <a href="" class="btn btn-success btn-outline-rounded green"> start using bootsnipp <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
-                </p>
-                      </div>
-                      <div class="tab-pane fade" id="profile" ng-class="{'in active':showTab === 'profile'}" ng-show="showTab === 'profile'">
-                          <h3 class="head text-center">Create a Bootsnipp<sup>™</sup> Profile</h3>
-                          <p class="narrow text-center">
-                              Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
-                          </p>
-                          
-                          <p class="text-center">
-                    <a href="" class="btn btn-success btn-outline-rounded green"> create your profile <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
-                </p>
-                          
-                      </div>
-                      <div class="tab-pane fade" id="messages" ng-class="{'in active':showTab === 'messages'}" ng-show="showTab === 'messages'">
-                          <h3 class="head text-center">Bootsnipp goodies</h3>
-                          <p class="narrow text-center">
-                              Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
-                          </p>
-                          
-                          <p class="text-center">
-                    <a href="" class="btn btn-success btn-outline-rounded green"> start using bootsnipp <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
-                </p>
-                      </div>
-                      <div class="tab-pane fade" id="settings" ng-class="{'in active':showTab === 'settings'}" ng-show="showTab === 'settings'">
-                          <h3 class="head text-center">Drop comments!</h3>
-                          <p class="narrow text-center">
-                              Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
-                          </p>
-                          
-                          <p class="text-center">
-                    <a href="" class="btn btn-success btn-outline-rounded green"> start using bootsnipp <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
-                </p>
-                      </div>
-                      <div class="tab-pane fade" id="doner" ng-class="{'in active':showTab === 'doner'}" ng-show="showTab === 'doner'">
-  <div class="text-center">
-    <i class="img-intro icon-checkmark-circle"></i>
-</div>
-<h3 class="head text-center">thanks for staying tuned! <span style="color:#f48260;">♥</span> Bootstrap</h3>
-<p class="narrow text-center">
-  Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
-</p>
-</div>
-<div class="clearfix"></div>
-</div>
+                <div class="tab-content">
+                    <div class="tab-pane fade" id="home" ng-class="{'in active':showTab === 'facebook'}" ng-show="showTab === 'facebook'">
 
-</div>
-</div>
-</div>
+                        <h3 class="head text-center" style="color: #212121 !important;">Facebook</h3>
+                        <p class="narrow text-center my-p-class" style="margin-bottom: 33px;line-height: 1.8em;">
+                            Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
+                        </p>
+                        <center>
+                            <table class="table table-striped" style="width: 80%">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Graphics</th>
+                                        <th>Promotions</th>
+                                        <th>Advertising</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Daily</td>
+                                        <td ng-class="{'selected':graphics}">200</td>
+                                        <td>200</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monthly</td>
+                                        <td ng-class="{'selected':graphics}">200</td>
+                                        <td>200</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3 Month</td>
+                                        <td ng-class="{'selected':graphics}">200</td>
+                                        <td>200</td>
+                                        <td>300</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </center>
+                    </div>
+                    <div class="tab-pane fade" id="profile" ng-class="{'in active':showTab === 'whatsapp'}" ng-show="showTab === 'whatsapp'">
+                        <h3 class="head text-center">Create a Bootsnipp<sup>™</sup> Profile</h3>
+                        <p class="narrow text-center">
+                            Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
+                        </p>
+
+                        <p class="text-center">
+                            <a href="" class="btn btn-success btn-outline-rounded green"> create your profile <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                        </p>
+
+                    </div>
+                    <div class="tab-pane fade" id="messages" ng-class="{'in active':showTab === 'sms'}" ng-show="showTab === 'sms'">
+                        <h3 class="head text-center">Bootsnipp goodies</h3>
+                        <p class="narrow text-center">
+                            Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
+                        </p>
+
+                        <p class="text-center">
+                            <a href="" class="btn btn-success btn-outline-rounded green"> start using bootsnipp <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="settings" ng-class="{'in active':showTab === 'station'}" ng-show="showTab === 'station'">
+                        <h3 class="head text-center">Drop comments!</h3>
+                        <p class="narrow text-center">
+                            Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
+                        </p>
+
+                        <p class="text-center">
+                            <a href="" class="btn btn-success btn-outline-rounded green"> start using bootsnipp <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="doner" ng-class="{'in active':showTab === 'promotion'}" ng-show="showTab === 'promotion'">
+                        <div class="text-center">
+                            <i class="img-intro icon-checkmark-circle"></i>
+                        </div>
+                        <h3 class="head text-center">thanks for staying tuned! <span style="color:#f48260;">♥</span> Bootstrap</h3>
+                        <p class="narrow text-center">
+                            Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="combo" ng-class="{'in active':showTab === 'ok'}" ng-show="showTab === 'ok'">
+                        <div class="text-center">
+                            <i class="img-intro icon-checkmark-circle"></i>
+                        </div>
+                        <h3 class="head text-center">thanks for staying tuned! <span style="color:#f48260;">♥</span> Bootstrap</h3>
+                        <p class="narrow text-center">
+                            Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
+                        </p>
+                        <div class="container" style="width: 80%">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="funkyradio-default">
+                                        <input type="checkbox" name="checkbox" id="checkbox1" style="height: 24px;    width: 24px;" />
+                                        <label for="checkbox1" style="vertical-align: super;">Facebook</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="funkyradio-primary">
+                                        <input type="checkbox" name="checkbox" id="checkbox2" style="height: 24px;    width: 24px;" />
+                                        <label for="checkbox2" style="vertical-align: super;">Whatsapp</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="funkyradio-success">
+                                        <input type="checkbox" name="checkbox" id="checkbox3" style="height: 24px;    width: 24px;" />
+                                        <label for="checkbox3" style="vertical-align: super;">SMS</label>
+                                    </div>
+                                </div>
+                            </div>
+                                                      <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="funkyradio-default">
+                                        <input type="checkbox" name="checkbox" id="checkbox1" style="height: 24px;    width: 24px;" />
+                                        <label for="checkbox1" style="vertical-align: super;">Station</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="funkyradio-primary">
+                                        <input type="checkbox" name="checkbox" id="checkbox2" style="height: 24px;    width: 24px;" />
+                                        <label for="checkbox2" style="vertical-align: super;">Promotion</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
                    
 
 
