@@ -5,6 +5,7 @@ $scope.$on('$viewContentLoaded', function(event) {
     {
         $location.path('/plans')
     }
+	
 });
 
     $scope.login = {};
@@ -19,7 +20,8 @@ $scope.$on('$viewContentLoaded', function(event) {
         });
     };
    
-   
+
+	
     $scope.logout = function () {
         Data.get('logout').then(function (results) {
             Data.toast(results);

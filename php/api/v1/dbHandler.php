@@ -82,14 +82,14 @@ class DbHandler {
             // $values = $values."'".$$desired_key."',";
         }
         $query = "UPDATE ".$table_name." SET ".$qString.' '.$conditionString;
-        echo $query;
-       /* $r = $this->conn->query($query) or die($this->conn->error.__LINE__);
+        //echo $query."           \n";
+        $r = $this->conn->query($query) or die($this->conn->error.__LINE__);
 
         if ($r) {
             return $r;
             } else {
             return NULL;
-        }*/
+        }
     }
 public function getSession(){
     if (!isset($_SESSION)) {

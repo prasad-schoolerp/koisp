@@ -57,7 +57,7 @@
 				$(
 					'<div id="navPanel">' +
 						'<nav>' +
-							 '"<a class="link depth-0" href="#/registerApplicant"><span class="indent-0"></span>Register Student</a><a class="link depth-0" href="#/searchApplicants"><span class="indent-0"></span>Search Applicants</a><a class="link depth-0" href="#/batchAssignment"><span class="indent-0"></span>Batch Assignment</a><a class="link depth-0" href="#/signup"><span class="indent-0"></span>Enroll User</a><a class="link depth-0"><span class="indent-0"></span>Logout</a>"'+
+							 '<a class="link depth-0" href="#/plans"><span class="indent-0"></span>Plans</a><a class="link depth-0" href="#/carousal"><span class="indent-0"></span>Carousal</a><a class="link depth-0"><span class="indent-0"></span>Logout</a>'+
 						'</nav>' +
 					'</div>'
 				)

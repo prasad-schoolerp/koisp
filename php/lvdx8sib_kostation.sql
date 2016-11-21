@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2016 at 11:24 AM
+-- Generation Time: Nov 21, 2016 at 06:50 AM
 -- Server version: 5.7.11
 -- PHP Version: 5.6.19
 
@@ -30,20 +30,25 @@ CREATE TABLE `carousal` (
   `id` int(11) NOT NULL,
   `path` text NOT NULL,
   `isDeleted` tinyint(1) NOT NULL,
-  `isActive` tinyint(1) NOT NULL
+  `isActive` tinyint(1) NOT NULL,
+  `priority` int(11) NOT NULL DEFAULT '100'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `carousal`
 --
 
-INSERT INTO `carousal` (`id`, `path`, `isDeleted`, `isActive`) VALUES
-(1, 'asdasdasd', 1, 1),
-(2, 'aasd', 1, 0),
-(3, 'asdasdasd', 1, 1),
-(4, 'aasd', 1, 0),
-(5, 'asdasdasd', 0, 1),
-(6, 'aasd', 1, 0);
+INSERT INTO `carousal` (`id`, `path`, `isDeleted`, `isActive`, `priority`) VALUES
+(1, 'asdasdasd', 1, 1, 0),
+(2, 'aasd', 1, 0, 0),
+(3, 'asdasdasd', 1, 1, 0),
+(4, 'aasd', 1, 0, 0),
+(5, 'asdasdasd', 0, 0, 2),
+(6, 'aasd', 1, 0, 0),
+(7, 'abc', 0, 0, 1),
+(8, 'abc', 0, 0, 100),
+(9, 'abc.png', 1, 0, 100),
+(10, 'img-1479699689762.jpg', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -97,7 +102,7 @@ ALTER TABLE `user_auth`
 -- AUTO_INCREMENT for table `carousal`
 --
 ALTER TABLE `carousal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `user_auth`
 --

@@ -12,3 +12,8 @@ payload :  {"customer":{"email":"admin@admin.com","password":"admin"}}
 signup service
 http://localhost/git/php/api/v1/signUp : post
 payload : {"customer":{"email":"abc@abc.com","password":"abc","name":"abc","phone":"1231231231","address":"abc"}}
+
+
+update table data
+http://localhost/git/php/api/v1/saveTblData : post
+payload : {"tblInfo":[{"id":"5","path":"asdasdasd","isDeleted":"0","isActive":"1","priority":"1"},{"id":"7","path":"abc","isDeleted":"0","isActive":"0","priority":"3"},{"id":"8","path":"abc","isDeleted":"0","isActive":"0","priority":"100"},{"id":"10","path":"img-1479699689762.jpg","isDeleted":"0","isActive":"0","priority":"100"}]}

@@ -24,18 +24,55 @@
 							<form id="uploadForm"  method="post" action="upload.php" class="form-horizontal pure-form pure-form-stacked" enctype="multipart/form-data">
 
 					<fieldset class="pure-group">
-						<legend><b>Search Applicants</b></legend>
+						<legend><b>Upload Image(One At a time)</b></legend>
 						<label for="file">Select image
 													<input  type="file" name="file" id="file" accept="image/*"/>
 													</label>
 							
-																		<button type="submit">submit</button>
+																		<button class="pure-button pure-button-primary" type="submit">Upload</button>
 
 							
 									
 					</fieldset>
 							</form>
+<fieldset>
+	<legend><b>Select images for Carousal(Max 3)</b></legend>
 
+							<table class="pure-table" width="100%">
+    <thead>
+        <tr>
+            <th>Sr NO</th>
+            <th>Image</th>
+            <th>Image Name</th>
+            <th>isActive</th>
+			<th>Action</th>
+			<th>Action</th>
+			<th>Delete</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        
+			
+			<tr valign="middle important!" ng-repeat = "row in tblData" ng-class-odd="'pure-table-odd'" ng-class-even="'pure-table-even'">
+            <td>{{$index}}</td>
+            <td><img ng-src="../carousalImages/{{row.path}}" width="100px"/></td>
+            <td>{{row.path}}</td>
+            <td>
+				<select ng-model="row.isActive" ng-change="activeChanged('selectBox'+$index, $index)" id="selectBox{{$index}}">
+					<option value = "1">Yes</option>
+					<option value = "0">No</option>
+				</select>
+			</td>
+			<td><button class="pure-button" ng-click="moveUp($index)">Move Up</button</td>
+            <td><button class="pure-button" ng-click="moveDown($index)">Move Down</button</td>
+            <td><a href = "javascript:void(0)" ng-click="delete(row.id,$index)">delete</td>
+			</tr>
+    </tbody>
+</table>
+	<button class="pure-button pure-button-primary" ng-click="saveTableData()">Save</button>
+
+</fieldset>
 					</div>
 				</div>                           
 			</div>
@@ -44,6 +81,7 @@
 		<div ng-include src="'partials/footer.html'"></div>
 
 	</div>
+
 
 
 

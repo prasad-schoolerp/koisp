@@ -2,8 +2,11 @@ app.controller('carousalCtrl', function ($scope,$window, $rootScope, $routeParam
 
 
     $scope.$on('$viewContentLoaded', function(event) {
-$(document).ready(function (e) {
-    $("#uploadForm").on('submit',(function(e) {
+	$scope.tblData = {};
+	$scope.loadData();
+	
+	$(document).ready(function (e) {
+		$("#uploadForm").on('submit',(function(e) {
         e.preventDefault();
         $.ajax({
             url: "upload.php?fileName=img"+"-"+Date.now() +"." + $("#file").val().split('.').pop(),
@@ -16,14 +19,11 @@ $(document).ready(function (e) {
             {
                 if(res=="success")
                 {
-			var a = "img"+"-"+Date.now() +"." + $("#file").val().split('.').pop();
-										Data.post('insertImgName', {
-        										"path":a,"isDeleted":0,"isActive":0
-
-    }).then(function (results) {
-        Data.toast(results);
-        $scope.loadList();
-    });
+			var path = "img"+"-"+Date.now() +"." + $("#file").val().split('.').pop();
+			Data.post('insertImgName', {"path":path,"isDeleted":0,"isActive":0}).then(function (results) {
+				Data.toast(results);
+				//$scope.loadList();
+			});
 			
 					
                             alert(res);
@@ -42,7 +42,103 @@ $(document).ready(function (e) {
 
    });
    
-   //image upload
+$scope.loadData = function(){
+    Data.get('getCarousalData').then(function (results) {
+            Data.toast(results);
+            $scope.tblData = results.data;
+			console.log($scope.tblData)
+			});
+			
+	}
+$scope.activeChanged = function(id,index){
+	var indexToRemove = index;
+	var numberToRemove = 1;
+	if($('#'+id).val() == 0)
+	{
+		$scope.tblData[index].priority = 100;
+		var temp = $scope.tblData[index];
+		$scope.tblData.splice(indexToRemove, numberToRemove);
+		$scope.tblData.push(temp);
+	}
+	else
+	{
+		$scope.tblData[index].priority = 1;
+		var temp = $scope.tblData[index];
+		$scope.tblData.splice(indexToRemove, numberToRemove);
+		$scope.tblData.unshift(temp);
+	}
+	console.log($scope.tblData)
+}
+$scope.moveUp = function(index){
+	if(index!= 0) 
+	{
+	$scope.temp = $scope.tblData[index];
+	$scope.tblData[index] = $scope.tblData[index-1];
+	if(index>3)
+	{
+		$scope.temp.priority = 100
+	}
+	else
+	{
+		$scope.temp.priority = index
+	}
+	$scope.tblData[index-1] = $scope.temp;
+	}
+		console.log($scope.tblData)
+}
 
+$scope.moveDown = function(index)
+{
+	if((index+1) != $scope.tblData.length) 
+	{
+	$scope.temp = $scope.tblData[index];
+	$scope.tblData[index] = $scope.tblData[index+1];
+	if(index>3)
+	{
+		$scope.temp.priority = 100
+	}
+	else
+	{
+		$scope.temp.priority = index
+	}
+	$scope.tblData[index+1] = $scope.temp;
+	}
+	console.log($scope.tblData)
+}
 
+$scope.delete = function(id,index)
+{
+	 var temp= $window.confirm("You really want to delete "+$scope.tblData[index].path+ " image?");
+    if(temp==true)
+    {
+      Data.post('delteCarousalImage', {
+        'id': id
+    }).then(function (results) {
+        Data.toast(results);
+		$scope.tblData = results.data;
+    });
+	}
+}
+
+$scope.saveTableData = function(){
+	var count = 0;
+	for(var index=0;index<$scope.tblData.length;index++)
+	{
+		
+		if($scope.tblData[index].isActive == "1")
+		{
+			count++;
+		}
+	}
+	if(count > 3)
+	{
+		alert("Maximum 3 images can be active for carousal!")
+		return;
+	}
+	
+	Data.post('saveTblData', {"tblInfo":$scope.tblData}).then(function (results) {
+        Data.toast(results);
+		$scope.tblData = results.data;
+    });
+}
 });

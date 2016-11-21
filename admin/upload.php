@@ -4,7 +4,7 @@ if(is_array($_FILES)) {
 	if(is_uploaded_file($_FILES['file']['tmp_name'])) 
 	{
 		$sourcePath = $_FILES['file']['tmp_name'];
-		echo $_GET['fileName'];
+		//echo $_GET['fileName'];
 		$targetPath = "../carousalImages/".$_GET['fileName'];
 		if (!file_exists('../carousalImages')) {
 			    mkdir('../carousalImages', 0777, true);
