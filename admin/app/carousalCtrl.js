@@ -1,6 +1,6 @@
 app.controller('carousalCtrl', function ($scope,$window, $rootScope, $routeParams, $location, $http, Data,ShareData) {
 
-
+	$scope.max = 3;
     $scope.$on('$viewContentLoaded', function(event) {
 	$scope.tblData = {};
 	$scope.loadData();
@@ -26,7 +26,6 @@ app.controller('carousalCtrl', function ($scope,$window, $rootScope, $routeParam
 				$scope.tblData = results.data;
 			});
 			
-					
                            // alert(res);
                 }
                 else
@@ -75,14 +74,14 @@ $scope.moveUp = function(index){
 	{
 	$scope.temp = $scope.tblData[index];
 	$scope.tblData[index] = $scope.tblData[index-1];
-	if(index>3)
-	{
-		$scope.temp.priority = 100
-	}
-	else
-	{
-		$scope.temp.priority = index
-	}
+	// if(index>3)
+	// {
+		// $scope.temp.priority = 100
+	// }
+	// else
+	// {
+		// $scope.temp.priority = index
+	// }
 	$scope.tblData[index-1] = $scope.temp;
 	}
 		console.log($scope.tblData)
@@ -94,14 +93,14 @@ $scope.moveDown = function(index)
 	{
 	$scope.temp = $scope.tblData[index];
 	$scope.tblData[index] = $scope.tblData[index+1];
-	if(index>3)
-	{
-		$scope.temp.priority = 100
-	}
-	else
-	{
-		$scope.temp.priority = index
-	}
+	// if(index>3)
+	// {
+		// $scope.temp.priority = 100
+	// }
+	// else
+	// {
+		// $scope.temp.priority = index
+	// }
 	$scope.tblData[index+1] = $scope.temp;
 	}
 	console.log($scope.tblData)
@@ -125,15 +124,21 @@ $scope.saveTableData = function(){
 	var count = 0;
 	for(var index=0;index<$scope.tblData.length;index++)
 	{
-		
+		if(index < $scope.max && $scope.tblData[index].isActive == "1"){
+			$scope.tblData[index].priority = index+1;
+		}
+		else
+		{
+			$scope.tblData[index].priority = 100;
+		}
 		if($scope.tblData[index].isActive == "1")
 		{
 			count++;
 		}
 	}
-	if(count > 3)
+	if(count > $scope.max)
 	{
-		alert("Maximum 3 images can be active for carousal!")
+		alert("Maximum "+$scope.max+" images can be active for carousal!")
 		return;
 	}
 	

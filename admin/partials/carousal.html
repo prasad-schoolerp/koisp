@@ -3,7 +3,7 @@
 	<div id="header-wrapper">
 		<header id="header" class="container">
 			<div id="logo">
-				<h1><a href="#">KOStation</a></h1>
+				<h1><a href="#">KO Station</a></h1>
 			</div>
 			<nav id="nav">
 				<ul>
@@ -19,15 +19,14 @@
 	</div>  
 	<div id="banner-wrapper">
 		<div id="banner" class="box container">
-			<div class="row">
-				<div class="16u pure-form">
+			<div>
 							<form id="uploadForm"  method="post" action="upload.php" class="form-horizontal pure-form pure-form-stacked" enctype="multipart/form-data">
 
 					<fieldset class="pure-group">
 						<legend><b>Upload Image(One At a time)</b></legend>
-						<label for="file">Select image
+						<label for="file">Select image : </label>
 													<input  type="file" name="file" id="file" accept="image/*"/>
-													</label>
+													
 							
 																		<button class="pure-button pure-button-primary" type="submit">Upload</button>
 
@@ -35,12 +34,12 @@
 									
 					</fieldset>
 							</form>
-<fieldset>
+	<fieldset class="pure-form">
 	<legend><b>Select images for Carousal(Max 3)</b></legend>
-
-							<table class="pure-table" width="100%">
+	</fieldset><br>
+							<table class="pure-table pure-form" style="width:100%">
     <thead>
-        <tr>
+        <tr >
             <th>Sr NO</th>
             <th>Image</th>
             <th>Image Name</th>
@@ -54,26 +53,23 @@
     <tbody>
         
 			
-			<tr valign="middle important!" ng-repeat = "row in tblData" ng-class-odd="'pure-table-odd'" ng-class-even="'pure-table-even'">
-            <td>{{$index}}</td>
-            <td><img ng-src="../carousalImages/{{row.path}}" width="100px"/></td>
-            <td>{{row.path}}</td>
-            <td>
+			<tr ng-repeat = "row in tblData" ng-class-odd="'pure-table-odd'" ng-class-even="'pure-table-even'">
+            <td style="vertical-align:middle !important">{{$index+1}}</td>
+            <td  style="vertical-align:middle !important"><img ng-src="../carousalImages/{{row.path}}" width="100px"/></td>
+            <td style="vertical-align:middle !important">{{row.path}}</td>
+            <td  style="vertical-align:middle !important">
 				<select ng-model="row.isActive" ng-change="activeChanged('selectBox'+$index, $index)" id="selectBox{{$index}}">
 					<option value = "1">Yes</option>
 					<option value = "0">No</option>
 				</select>
 			</td>
-			<td><button class="pure-button" ng-click="moveUp($index)">Move Up</button</td>
-            <td><button class="pure-button" ng-click="moveDown($index)">Move Down</button</td>
-            <td><a href = "javascript:void(0)" ng-click="delete(row.id,$index)">delete</td>
+			<td  style="vertical-align:middle !important"><button class="pure-button" ng-click="moveUp($index)">Move Up</button</td>
+            <td  style="vertical-align:middle !important"><button class="pure-button" ng-click="moveDown($index)">Move Down</button</td>
+            <td  style="vertical-align:middle !important"><a href = "javascript:void(0)" ng-click="delete(row.id,$index)">delete</td>
 			</tr>
     </tbody>
 </table>
 	<button class="pure-button pure-button-primary" ng-click="saveTableData()">Save</button>
-
-</fieldset>
-					</div>
 				</div>                           
 			</div>
 
