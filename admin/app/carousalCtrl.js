@@ -7,9 +7,11 @@ app.controller('carousalCtrl', function ($scope,$window, $rootScope, $routeParam
 	
 	$(document).ready(function (e) {
 		$("#uploadForm").on('submit',(function(e) {
+		$(".se-pre-con").show();
+		$scope.path = "img"+"-"+Date.now() +"." + $("#file").val().split('.').pop();
         e.preventDefault();
         $.ajax({
-            url: "upload.php?fileName=img"+"-"+Date.now() +"." + $("#file").val().split('.').pop(),
+            url: "upload.php?fileName="+$scope.path,
             type: "POST",
             data:  new FormData(this),
             contentType: false,
@@ -19,14 +21,13 @@ app.controller('carousalCtrl', function ($scope,$window, $rootScope, $routeParam
             {
                 if(res=="success")
                 {
-			var path = "img"+"-"+Date.now() +"." + $("#file").val().split('.').pop();
-			Data.post('insertImgName', {"path":path,"isDeleted":0,"isActive":0}).then(function (results) {
+			Data.post('insertImgName', {"path":$scope.path,"isDeleted":0,"isActive":0}).then(function (results) {
 				Data.toast(results);
-				//$scope.loadList();
+				$scope.tblData = results.data;
 			});
 			
 					
-                            alert(res);
+                           // alert(res);
                 }
                 else
                 {       alert(res);

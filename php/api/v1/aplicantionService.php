@@ -27,7 +27,7 @@ $app->post('/insertImgName', function() use ($app) {
     $response["message"] = "Data added and fetched successfully";
 	if($result != NULL) 
 	{   
-		$response["data"]=$result;
+		$response["data"]=$result1;
 	}
     echoResponse(200, $response);
   } else {
