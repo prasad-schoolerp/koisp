@@ -9,19 +9,9 @@
 
         <!-- Wrapper for Slides -->
         <div class="carousel-inner">
-            <div class="item active">
+            <div class="item active" ng-repeat="item in sliderData">
                 <!-- Set the first background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('app/img/banner5.jpg');"></div>
-                
-            </div>
-            <div class="item">
-                <!-- Set the second background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('app/img/banner5.jpg');"></div>
-                
-            </div>
-            <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('app/img/banner5.jpg');"></div>
+                <div class="fill"><img ng-src="/koisp/carousalImages/{{item.path}}" /></div>
                 
             </div>
         </div>
