@@ -11,7 +11,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
 <link href="app/styles/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-
+<style>
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng.ng-cloak {
+    display: none;
+}
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(admin/assets/css/images/loader-64x/Preloader_1.gif) center no-repeat #fff;
+}
+</style>
 <!-- js -->
 <script type="text/javascript" src="app/scripts/vendor/jquery-2.1.4.min.js"></script>
 <link rel="shortcut icon" type="image/png" href="app/img/favicon.png"/>
@@ -34,7 +49,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </script>
 <!-- start-smoth-scrolling -->
 </head>	
-<body ng-controller="MainController" scroll ng-init="saveScreen('home')">
+<body ng-controller="MainController" scroll ng-init="saveScreen('home')" ng-cloak="">
+ <div class="se-pre-con"></div>
+
 <!-- banner -->
 	<div class="banner" style="position: relative; z-index: 1;">
 		<nav class="navbar navbar-default fixed-navbar">
@@ -204,6 +221,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	    $('.carousel').carousel({
 	        interval: 5000 //changes the speed
 	    })
-    </script>
+
+    $(window).load(function() {
+    // Animate loader off screen
+    $(".se-pre-con").fadeOut("slow");
+    
+  });
+  </script>
 </body>
 </html>

@@ -17,7 +17,7 @@
                         url: api
                     }).then(function(response) {
                         if(response.data) {
-                            $scope.sliderData = response.data;
+                            $scope.sliderData = response.data.data;
                         }
                     }, function(response) {
                         // called asynchronously if an error occurs

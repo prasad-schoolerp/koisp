@@ -9,9 +9,9 @@
 
         <!-- Wrapper for Slides -->
         <div class="carousel-inner">
-            <div class="item" ng-class="{'active': $index === 0}" ng-repeat="item in sliderData track by $index>
+            <div class="item" ng-class="{'active': $index === 0}" ng-repeat="item in sliderData track by $index">
                 <!-- Set the first background image using inline CSS below. -->
-                <div class="fill"><img ng-src="/carousalImages/{{item.path}}" /></div>                
+                <div class="fill"><img ng-src="../carousalImages/{{item.path}}" /></div>                
             </div>
         </div>
 
