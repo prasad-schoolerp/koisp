@@ -39,7 +39,7 @@
 	</fieldset><br>
 							<table class="pure-table pure-form" style="width:100%">
     <thead>
-        <tr >
+        <tr style="text-align:center">
             <th>Sr NO</th>
             <th>Image</th>
             <th>Image Name</th>
@@ -53,7 +53,7 @@
     <tbody>
         
 			
-			<tr ng-repeat = "row in tblData" ng-class-odd="'pure-table-odd'" ng-class-even="'pure-table-even'">
+			<tr ng-repeat = "row in tblData" ng-class-odd="'pure-table-odd'" ng-class-even="'pure-table-even'" style="text-align:center">
             <td style="vertical-align:middle !important">{{$index+1}}</td>
             <td  style="vertical-align:middle !important"><img ng-src="../carousalImages/{{row.path}}" width="100px"/></td>
             <td style="vertical-align:middle !important">{{row.path}}</td>
@@ -63,9 +63,9 @@
 					<option value = "0">No</option>
 				</select>
 			</td>
-			<td  style="vertical-align:middle !important"><button class="pure-button" ng-click="moveUp($index)">Move Up</button</td>
-            <td  style="vertical-align:middle !important"><button class="pure-button" ng-click="moveDown($index)">Move Down</button</td>
-            <td  style="vertical-align:middle !important"><a href = "javascript:void(0)" ng-click="delete(row.id,$index)">delete</td>
+			<td  style="vertical-align:middle !important"><button class="pure-button" ng-click="moveUp($index)">Move Up</button></td>
+            <td  style="vertical-align:middle !important"><button class="pure-button" ng-click="moveDown($index)">Move Down</button></td>
+            <td  style="vertical-align:middle !important"><button class="pure-button" ng-click="delete(row.id,$index)">delete</button></td>
 			</tr>
     </tbody>
 </table>

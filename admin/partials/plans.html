@@ -1,3 +1,103 @@
+ <style>
+ /* Outer */
+.popup {
+    width:100%;
+    height:100%;
+    display:none;
+    position:fixed;
+    top:0px;
+    left:0px;
+    background:rgba(0,0,0,0.75);
+	z-index:999;
+}
+ 
+/* Inner */
+.popup-inner {
+    max-width:700px;
+    width:90%;
+    padding:40px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+    box-shadow:0px 2px 6px rgba(0,0,0,1);
+    border-radius:3px;
+    background:#fff;
+	z-index:1000;
+	    max-height: 90vh;
+	}
+ 
+/* Close Button */
+.popup-close {
+    width:30px;
+    height:30px;
+    padding-top:4px;
+    display:inline-block;
+    position:absolute;
+    top:0px;
+    right:0px;
+    transition:ease 0.25s all;
+    -webkit-transform:translate(50%, -50%);
+    transform:translate(50%, -50%);
+    border-radius:1000px;
+    background:rgba(0,0,0,0.8);
+    font-family:Arial, Sans-Serif;
+    font-size:20px;
+    text-align:center;
+    line-height:100%;
+    color:#fff;
+}
+ 
+.popup-close:hover {
+    -webkit-transform:translate(50%, -50%) rotate(180deg);
+    transform:translate(50%, -50%) rotate(180deg);
+    background:rgba(0,0,0,1);
+    text-decoration:none;
+}
+</style>
+<div class="popup" data-popup="popup-1">
+    <div class="popup-inner">
+	<fieldset  class="pure-form  pure-form-aligned">
+				<legend><b>Add Category</b></legend>
+		
+		<label>Enter category name </label>
+		<input type = "text" ng-model="categoryName"/>
+		<br>
+		<button class="pure-button pure-button-primary">Submit</button>
+		</fieldset>
+		
+		<fieldset  class="pure-form">
+				<legend><b>Category List</b></legend>
+		</fieldset>
+	<div style="overflow-y: scroll; max-height: 40vh;">
+        
+       						<table class="pure-table pure-form" style="width:100%">
+    <thead>
+        <tr style="text-align:center">
+            <th>Sr NO</th>
+            <th>Category Name</th>
+            <th>Action</th>
+			<th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        
+			
+			<tr ng-repeat = "row in categoryData" ng-class-odd="'pure-table-odd'" ng-class-even="'pure-table-even'" style="text-align:center">
+            <td style="vertical-align:middle !important">{{$index+1}}</td>
+            <td style="vertical-align:middle !important">{{categoryName}}</td>
+            <td style="vertical-align:middle !important"><button class="pure-button" ng-click="edit($index)">Edit</button></td>
+            <td style="vertical-align:middle !important"><button class="pure-button" ng-click="delete(row.id,$index)">delete</button></td>
+			</tr>
+    </tbody>
+</table>
+		</div>
+		        <a class="popup-close" data-popup-close="popup-1" href="javascrip:void(0)">x</a>
+
+    </div>
+</div>
 <div id="page-wrapper">
 <!-- Header -->
 <div id="header-wrapper">
@@ -23,6 +123,7 @@
 									<div id="content">
 										<fieldset>
 									        <legend><b>Plan Details</b></legend>
+										</fieldset>
 								</div>
 								<div >
 								<form class="pure-form pure-form-aligned">
@@ -33,7 +134,8 @@
 										<option>Facebook</option>
 										<option>Whatsapp</option>
 									</select>
-									<button class="pure-button pure-input-rounded">+</button>
+									<span class="3u important(medium)"><a class="btn" data-popup-open="popup-1" href="javascrip:void(0)">Add New Category</a>
+
 								</div>
 								
 								<div class="pure-control-group">
@@ -58,8 +160,38 @@
 								</form>
 							</div>
 							
-					</div>
+					
+  <fieldset  class="pure-form">
+				<legend><b>Plan List</b></legend>
+		</fieldset>
+       						<table class="pure-table pure-form" style="width:100%">
+    <thead>
+        <tr style="text-align:center">
+            <th>Sr NO</th>
+            <th>Category Name</th>
+            <th>Sub Category</th>
+			<th>Duration</th>
+			<th>Price</th>
+            <th>Action</th>
+			<th>Action</th>
+        </tr>
+    </thead>
 
+    <tbody>
+        
+			
+			<tr ng-repeat = "row in planData" ng-class-odd="'pure-table-odd'" ng-class-even="'pure-table-even'" style="text-align:center">
+            <td style="vertical-align:middle !important">{{$index+1}}</td>
+            <td  style="vertical-align:middle !important">{{categoryName}}</td>
+			<td style="vertical-align:middle !important">{{SubCategory}}</td>
+            <td  style="vertical-align:middle !important">{{Duration}}</td>
+			<td style="vertical-align:middle !important">{{Price}}</td>
+            <td  style="vertical-align:middle !important"><button class="pure-button" ng-click="edit($index)">Edit</button></td>
+            <td  style="vertical-align:middle !important"><button class="pure-button" ng-click="delete(row.id,$index)">delete</button></td>
+			</tr>
+    </tbody>
+</table>
+</div>
 				</div>
 
 	</div>
