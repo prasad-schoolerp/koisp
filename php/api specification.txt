@@ -17,3 +17,14 @@ payload : {"customer":{"email":"abc@abc.com","password":"abc","name":"abc","phon
 update table data
 http://localhost/git/php/api/v1/saveTblData : post
 payload : {"tblInfo":[{"id":"5","path":"asdasdasd","isDeleted":"0","isActive":"1","priority":"1"},{"id":"7","path":"abc","isDeleted":"0","isActive":"0","priority":"3"},{"id":"8","path":"abc","isDeleted":"0","isActive":"0","priority":"100"},{"id":"10","path":"img-1479699689762.jpg","isDeleted":"0","isActive":"0","priority":"100"}]}
+
+get all category
+http://localhost/git/php/api/v1/getCategories: GET
+"data":[{"category_id":"1","name":"Facebook","description":"Social Networking website.","last_update_dt":"2016-11-24 00:16:48"},{"category_id":"2","name":"Whatsapp","description":"Chatting application.","last_update_dt":"2016-11-24 00:17:33"},{"category_id":"6","name":"Facebook","description":"Social Networking website.","last_update_dt":"0000-00-00 00:00:00"}]}
+
+add category
+http://localhost/git/php/api/v1/addCategory: POST
+{
+"name":"Facebook",
+"description":"Social Networking website."
+}

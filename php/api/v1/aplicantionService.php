@@ -86,3 +86,45 @@ $result = $db->executeQuery("UPDATE carousal SET isDeleted=1, priority = 100, is
     echoResponse(201, $response);
   } 
 });
+
+/*
+ * Get All Categories.
+ */
+
+//load carousal data from the carousal table where isDeleted is false
+$app->get('/getCategories', function() {
+  $db = new DbHandler();
+  $result = $db->getMultipleRecord("select * from category");
+  if ($result != NULL) {
+    $response["status"] = "success";
+    $response["message"] = "Data fetched successfully";
+    $response["data"]=$result;
+    echoResponse(200, $response);
+  } else {
+    $response["status"] = "error";
+    $response["message"] = "Failed to fetch data";
+    echoResponse(201, $response);
+  } 
+});
+
+/*
+ * Create Category.
+ */
+
+$app->post('/addCategory', function() use ($app) {
+  $db = new DbHandler();
+  $data = json_decode($app->request->getBody());
+  $column_names = array("category_id", "name", "description", "last_update_dt");
+
+  $result = $db->insertIntoTable($data, $column_names, "category");
+   if ($result != NULL) {
+    $response["status"] = "success";
+    $response["message"] = "Category added successfully";
+    $response["data"]=$result;
+    echoResponse(200, $response);
+  } else {
+    $response["status"] = "error";
+    $response["message"] = "Failed to add cateogry";
+    echoResponse(201, $response);
+  } 
+});
