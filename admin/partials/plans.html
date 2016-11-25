@@ -58,15 +58,24 @@
 </style>
 <div class="popup" data-popup="popup-1">
     <div class="popup-inner">
-	<fieldset  class="pure-form  pure-form-aligned">
-				<legend><b>Add Category</b></legend>
-		
+	<form class="pure-form pure-form-aligned">
+    <fieldset>
+	<legend><b>Add Category</b></legend>
+		<div class="pure-control-group">
 		<label>Enter category name </label>
 		<input type = "text" ng-model="categoryName"/>
-		<br>
-		<button class="pure-button pure-button-primary">Submit</button>
+		</div>
+		<div class="pure-control-group">
+		<label>Enter description </label>
+		<input type = "text" ng-model="categoryDescription"/>
+		</div>
+				<div class="pure-control-group">
+
+		<button class="pure-button pure-button-primary" ng-click="saveUpdateCategory()">{{categorybutton}}</button>
+				<button class="pure-button pure-button-primary" ng-click="clearCategory()">Clear</button>
+</div>
 		</fieldset>
-		
+	</form>
 		<fieldset  class="pure-form">
 				<legend><b>Category List</b></legend>
 		</fieldset>
@@ -77,6 +86,7 @@
         <tr style="text-align:center">
             <th>Sr NO</th>
             <th>Category Name</th>
+			<th>Description</th>
             <th>Action</th>
 			<th>Action</th>
         </tr>
@@ -87,9 +97,10 @@
 			
 			<tr ng-repeat = "row in categoryData" ng-class-odd="'pure-table-odd'" ng-class-even="'pure-table-even'" style="text-align:center">
             <td style="vertical-align:middle !important">{{$index+1}}</td>
-            <td style="vertical-align:middle !important">{{categoryName}}</td>
-            <td style="vertical-align:middle !important"><button class="pure-button" ng-click="edit($index)">Edit</button></td>
-            <td style="vertical-align:middle !important"><button class="pure-button" ng-click="delete(row.id,$index)">delete</button></td>
+            <td style="vertical-align:middle !important">{{row.name}}</td>
+			<td style="vertical-align:middle !important">{{row.description}}</td>
+            <td style="vertical-align:middle !important"><button class="pure-button" ng-click="editCategory(row.category_id,$index)">Edit</button></td>
+            <td style="vertical-align:middle !important"><button class="pure-button" ng-click="deleteCategory(row.category_id,$index)">delete</button></td>
 			</tr>
     </tbody>
 </table>
@@ -131,10 +142,9 @@
 								 <div class="pure-control-group">
 								 <label>Category</label>
 									<select>
-										<option>Facebook</option>
-										<option>Whatsapp</option>
+										<option ng-repeat = "row in categoryData" value="row.category_id">{{row.name}}</option>
 									</select>
-									<span class="3u important(medium)"><a class="btn" data-popup-open="popup-1" href="javascrip:void(0)">Add New Category</a>
+									<a class="btn" data-popup-open="popup-1" href="javascrip:void(0)">Add New Category</a>
 
 								</div>
 								

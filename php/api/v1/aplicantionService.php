@@ -114,10 +114,11 @@ $app->get('/getCategories', function() {
 $app->post('/addCategory', function() use ($app) {
   $db = new DbHandler();
   $data = json_decode($app->request->getBody());
-  $column_names = array("category_id", "name", "description", "last_update_dt");
+  $column_names = array("name", "description");
 
   $result = $db->insertIntoTable($data, $column_names, "category");
    if ($result != NULL) {
+	$result = $db->getMultipleRecord("select * from category");
     $response["status"] = "success";
     $response["message"] = "Category added successfully";
     $response["data"]=$result;
@@ -125,6 +126,50 @@ $app->post('/addCategory', function() use ($app) {
   } else {
     $response["status"] = "error";
     $response["message"] = "Failed to add cateogry";
+    echoResponse(201, $response);
+  } 
+});
+
+
+/*
+ * Delete Category.
+ */
+ $app->post('/delteCategory', function() use ($app) {
+ $response = array();
+ $data = json_decode($app->request->getBody());
+ $db = new DbHandler();
+$result = $db->executeQuery("Delete from category where category_id=".$data->id); 
+  if ($result != NULL) {
+	$result1 = $db->getMultipleRecord("select * from category");
+    $response["status"] = "success";
+    $response["message"] = "Data deteted successfully";
+	$response["data"]=$result1;
+    echoResponse(200, $response);
+  } else {
+    $response["status"] = "error";
+    $response["message"] = "Failed to delete data";
+    echoResponse(201, $response);
+  } 
+});
+
+/*
+ * Update Category.
+ */
+$app->post('/updateCategory', function() use ($app) {
+ $response = array();
+ $data = json_decode($app->request->getBody());
+ $db = new DbHandler();
+ $column_names = array("name", "description");
+$result = $db->UpdateTable( $data,$column_names,"category","where category_id=".$data->id); 
+  if ($result != NULL) {
+	$result1 = $db->getMultipleRecord("select * from category");
+    $response["status"] = "success";
+    $response["message"] = "Data updated successfully";
+	$response["data"]=$result1;
+    echoResponse(200, $response);
+  } else {
+    $response["status"] = "error";
+    $response["message"] = "Failed to update data";
     echoResponse(201, $response);
   } 
 });

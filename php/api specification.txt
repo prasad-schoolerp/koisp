@@ -28,3 +28,13 @@ http://localhost/git/php/api/v1/addCategory: POST
 "name":"Facebook",
 "description":"Social Networking website."
 }
+
+
+update category
+http://localhost/git/php/api/v1/updateCategory
+{"id":"6","name":"Google+","description":"Social Networking website. "}
+
+delete category
+http://localhost/git/php/api/v1/delteCategory
+{id: "10"}
+
