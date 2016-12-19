@@ -1,6 +1,6 @@
 app.controller('carousalCtrl', function ($scope,$window, $rootScope, $routeParams, $location, $http, Data,ShareData) {
 
-	$scope.max = 3;
+	$scope.max = 1;
     $scope.$on('$viewContentLoaded', function(event) {
 	$scope.tblData = {};
 	$scope.loadData();
